@@ -1,136 +1,133 @@
 
-<h2>Conventions utilisées dans ce manuel</h2>
+<h2>Conventions Used In This Manual</h2>
 
 <p>
-  Cette section couvre les conventions de typographie et de langage
-  utilisées dans ce manuel.
+  This section covers some of the typographical and language conventions
+  used in this manual.
 </p>
 
-<h3>Claviers et modificateurs</h3>
+<h3>Keyboards and Modifiers</h3>
 
 <p>
-  <dfn>Les combinaisons de touches</dfn> sont notées comme suit: <kbd>s</kbd> ou
+  <dfn>Keyboard bindings</dfn> are shown like this: <kbd>s</kbd> or
   <kbd class="mod1">x</kbd>.
 </p>
 
 <p>
-  <kbd class="mod1">x</kbd> signifie "appuyez sur <kbd class="mod1n"></kbd>
-  et en même temps appuyez sur la touche <kbd>x</kbd>".
+  <kbd class="mod1">x</kbd> means "press the <kbd class="mod1n"></kbd>
+  key, keep it pressed and then also press the <kbd>x</kbd> key".
 </p>
 
 <p>
-  On peut voir une combinaison telle que <kbd class="mod12">e</kbd>. Cela 
-  signifie "Appuyez les touches <kbd class="mod1n"></kbd> <em>et</em> 
-  <kbd class="mod2n"></kbd>, puis sans les relâcher appuyer sur <kbd>e</kbd>.
+  Combinations such as <kbd class="mod12">e</kbd> may be seen, which means
+  "hold down the <kbd class="mod1n"></kbd> key <em>and</em> the <kbd
+  class="mod2n"></kbd> key, and then, while keeping them both down, press the
+  <kbd>e</kbd> key".
 </p>
 
 <p class="note">
-  Les différents ordinateurs ont chacun leur conventions concernant la
-  touche de modification (Control ou Commande) principale. Si vous visualisez 
-  ce manuel sous MacOS, <kbd>Cmd</kbd> sera affiché lorsque cela est approprié 
-  (par exemple dans le paragraphe ci-dessus. Sur les autres systèmes 
-  d'exploitation, on verra <kbd>Ctrl</kbd>
+  Different platforms have different conventions for which modifier key
+  (Control or Command) to use as the primary or most common modifier. When
+  viewing this manual from a machine identifying itself as running OS X,
+  <kbd>Cmd</kbd> will be seen where appropriate (for instance in the first
+  example above). On other machines <kbd>Ctrl</kbd> will be seen instead.
 </p>
 
-<h3>La souris</h3>
+<h3>Mouse Buttons</h3>
 
 <p>
- <a href="@@mouse">Les boutons de la souris </a> sont notés <kbd
- class="mouse">Gauche</kbd>, <kbd class="mouse">Milieu</kbd> et <kbd
- class="mouse">Droit</kbd>. Ardour peut utiliser des boutons additionnels, 
- mais ils n'ont pas de comportement par défaut dans le programme.
+ <a href="@@mouse">Mouse buttons</a> are referred to as <kbd
+ class="mouse">Left</kbd>, <kbd class="mouse">Middle</kbd> and <kbd
+ class="mouse">Right</kbd>. Ardour can use additional buttons, but they have no
+ default behaviour in the program.
 </p>
 
-<h4>Modificateurs de clic</h4>
+<h4>Mouse Click Modifiers</h4>
 
 <p>
-  De nombreuses fonctions d'édition sont activées en cliquant tout en appuyant
-  sur une touche Modificateur par exemple <kbd class="mouse mod1">Gauche</kbd>.
+  Many editing functions are performed by clicking the mouse while holding a
+  modifier key, for example <kbd class="mouse mod1">Left</kbd>.
 </p>
 
-<h4>La molette de la souris</h4>
+<h4>Mouse Wheel</h4>
 
 <p>
-  Certains éléments de l'interface peuvent être contrôlés grace à la molette
-  lorsque le pointeur passe dessus. On note cette action par la molette par
   Some GUI elements can optionally be controlled with the mouse wheel when
   the pointer is hovering over them. The notation for mouse wheel action is
   <kbd class="mouse">&uArr;</kbd> <kbd class="mouse">&lArr;</kbd>
   <kbd class="mouse">&dArr;</kbd> <kbd class="mouse">&rArr;</kbd>.
 </p>
 
-<h4>Clic contextuel</h4>
+<h4>Context-click</h4>
 
 <p>
-  Le terme <dfn>Clic contextuel</dfn> est utilisé pour indiquer un 
-  clic-<kbd class="mouse">Droit</kbd> sur un élémént particulier de
-  l'interface utilisateur. Bien que le Clic-Droit soit la manière classique
-  et habituelle, il en existe d'autre pour faire la même chose; ce
-  terme désigne chacune d'elle, et le résultat sera toujours qu'un menu
-  spécifique à l'objet cliqué apparaîtra.
+  The term <dfn>context-click</dfn> is used to indicate a <kbd
+  class="mouse">Right</kbd>-click on a particular element of the graphical user
+  interface. Although right-click is the common, default way to do this, there
+  are other ways to accomplish the same thing&mdash;this term refers to any of
+  them, and the result is always that a menu specific to the item clicked on
+  will be displayed.
 </p>
 
-<h4>"Le Pointeur"</h4>
+<h4>"The Pointer"</h4>
 
 <p>
-  Lorsque le manuel se réfère au "pointeur", cela veut dire la représentation
-  à l'écran de la position de la souris, ou bien la position de d'une action
-  de toucher si une interface tactile est utilisée
+  When the manual refers to the "pointer", it means the on-screen
+  representation of the mouse position or the location of a touch action if
+  touch interface is being used.
 </p>
 
-<h3>Autres interfaces utilisateur</h3>
+<h3>Other User Input</h3>
 
 <p>
-  Ardour accepte des surfaces de contrôle tels que des <kbd
-  class="fader">faders</kbd>, <kbd class="knob">potentiomètres</kbd>, 
-  ou <kbd class="button">boutons</kbd>.
+  Ardour supports hardware controllers, such as banks of <kbd
+  class="fader">faders</kbd>, <kbd class="knob">knobs</kbd>, or <kbd
+  class="button">buttons</kbd>.
 </p>
 
-<h3>Entrées de Menus</h3>
+<h3>Menu Items</h3>
 
 <p>
-  Les entrées de menus sont noté <kbd class="menu">Premier &gt; Suivant &gt;
-  Et après</kbd>. Chaque "&gt;" sépare les niveaux de menu ou de sous-menu.
+  Menu items are indicated like this: <kbd class="menu">Top &gt; Next &gt;
+  Deeper</kbd>. Each "&gt;"-separated item indicates one level of a nested menu
+  or sub-menu.
 </p>
 
-<h3>Messages OSC</h3>
+<h3>OSC Messages</h3>
 
 <p>
-  Les messages OSC qu'ils soient reçus ou émis, sont affichés : <kbd class="osc">/transport_stop</kbd>.
+  OSC messages, whether sent or received, are displayed like this: <kbd class="osc">/transport_stop</kbd>.
 </p>
 
 <h3>Preference/Dialog Options</h3>
 
 <p>
-  Les choix dans les différentes boîtes de dialogue, particulièrement celles
-  pour les Préférences et les Propriétés sont notées de la manière suivante :
+  Choices in various dialogs, notably the Preferences and Properties dialog,
+  are indicated thus:
 </p>
 
 <p>
-  <kbd class="option">Edition &gt; Préférences &gt; Audio &gt; Une Option</kbd>.
+  <kbd class="option">Edit &gt; Preferences &gt; Audio &gt; Some Option</kbd>.
 </p>
 
 <p>
-  Chaque élément successif, indique un menu, un sous-menu ou un onglet de navigation.
-  Le dernier élément est celui à choisir ou à sélectionner.
+  Each successive item indicates either a menu, sub-menu, or a tabbed dialog
+  navigation. The final item is the one to choose or select.
 </p>
 
 <p>
-  Si une option est déselectionnée, elle ressemblera à :
+  If an option is deselected, it will look like this:
 </p>
 
 <p>
-  <kbd class="optoff">Edition &gt; Préférences &gt; Audio &gt; Autre
-    Option</kbd>.
+  <kbd class="optoff">Edit &gt; Preferences &gt; Audio &gt; Some other
+  Option</kbd>.
 </p>
 
-<h3>Saisie utilisateur</h3>
+<h3>User Input</h3>
 
 <p>
-  Certaines boîtes de dialogue ou fonctionnalités nécessitent que l'utilisateur entre
-  une donnée telle que <kbd class="input">celle-ci</kbd>
-  En de rares occasions, certaines opérations nécessiterons d'être réalisées via
-  le Terminal du système d'exploitation :
+  Some dialogs or features may require the user to input data <kbd class="input">such as this</kbd>. In rare cases, certain operations will be required to be performed at the command line of the operating system:
 </p>
 
 <kbd class="cmd lin">cat /proc/cpuinfo</kbd>
@@ -140,21 +137,21 @@
 <h3>Program Output</h3>
 
 <p>
-  Les messages importants d'Ardour ou d'autres programmes s'affiche
-  <samp>comme ça</samp>.
+  Important messages from Ardour or other programs will be displayed <samp>like
+  this</samp>.
 </p>
 
 <h3>Notes</h3>
 
 <p class="note">
-  Les notes concernant des choses importantes mais qui ne sont pas toujours évidentes
-  sont affichées de cette manière.
+  Important notes about things that might not otherwise be obvious are shown in
+  this format.
 </p>
 
 <h3>Warnings</h3>
 
 <p class="warning">
-  Problème épineux qui pourrait conduire à une catastrophe, la perte de données, la
-  dégradation de la qualité sonore, ou autres, sont affichés de cette manière.
+  Hairy issues that might cause things to go wrong, lose data, impair sound
+  quality, or eat your proverbial goldfish, are displayed in this way.
 </p>
 
