@@ -1,19 +1,56 @@
 
 <p>
-	The <kbd class="menu">Region</kbd> Menu is where the user can tweak its regions, the parts of audio or MIDI that sit on the timeline.
+  Le menu <kbd class="menu">Région</kbd> est l'endroit où l'utilisateur va pouvoir
+  agir sur les Régions, les morceaux d'audio ou de MIDI qui se trouvent sur la
+  ligne temporelle
 </p>
 
 <table class="dl">
-	<tr><th>Insert Region from Source List</th><td>If a region is selected in the Editor List, add it at the Edit point</td></tr>
-	<tr><th>Play Selected Regions</th><td>Starts playback at the beginning of the selected region(s), and stops at its(their) end</td></tr>
-	<tr><th>Tag Selected Regions</th><td>Prompts for a text to tag all the selected regions, this tag is visible in the <a href="@@the-region-list">Region list</a></td></tr>
-	<tr><th>Loop</th><td>Creates a loop range on the selected region's boundaries, and starts the looped playback</td></tr>
-	<tr><th>Rename&hellip;</th><td>Changes the name of the region, that appears in its top left area</td></tr>
-	<tr><th>Properties&hellip;</th><td>Shows the <kbd class="menu">Region properties</kbd> window, that displays detailed information about the region and allow for some modifications</td></tr>
-	<tr><th>Loudness Analysis&hellip;</th><td>Shows the <kbd class="menu">Audio Report/Analysis</kbd> window, that displays detailed <a href="@@metering-in-ardour">dBFS information</a> as well as a spectrogram (dBFS of frequency against time)</td></tr>
-	<tr><th>Spectral Analysis&hellip;</th><td>Shows the <kbd class="menu">Audio Report/Analysis</kbd> window, that displays a integrated spectral view of the region (dBFS against frequency)</td></tr>
-	<tr><th colspan="2">Edit</th></tr>
-		<tr><th class="sub1">Combine</th><td>Creates a new region by joining the selected audio regions in the same track, and replaces those region with the newly created compound. The same rules are applied to create the compound as for playback regarding e.g. layering</td></tr>
+  <tr><th>Insérer une région depuis la liste des sources</th>
+	
+	<td>Place la région sélectionnée dans la liste des Sources sur le point de
+	  montage</td></tr>
+	<tr><th>Jouer les régions sélectionnées</th>
+	  
+	  <td>Démarre l'écoute au début de la région la plus précoce et l'arrête à la
+		fin de la plus tardive</td></tr>
+	<tr><th>Etiqueter les régions sélectionnées</th>
+	  
+	  <td>Ouvre une invite pour entrer une étiquette pour les régions
+		sélectionnées. Cette étiquette est visible dans la
+		<a href="@@the-region-list">Liste des Régions</a></td></tr>
+	<tr><th>Boucle</th>
+	  
+	  <td>Crée un intervalle de boucle dont les limites sont les régions
+		sélectionnées et démarre la lecture en boucle</td></tr>
+	<tr><th>Renommer&hellip;</th>
+	  
+	  <td>Changer le nom d'une région. Il apparaît dans l'espace en haut à gauche
+		de la région</td></tr>
+	<tr><th>Propriétés&hellip;</th>
+	  
+	  <td>Affiche la fenêtre de <kbd class="menu">Propriétés de la Région</kbd>
+		qui affiche de manière détaillée des informations sur la région et permet
+		certaines modifications</td></tr>
+	<tr><th>Analyse de sonie&hellip;</th>
+	  
+	  <td>Ouvre la fenêtre <kbd class="menu">Rapport/Analyse audio</kbd> , qui
+		affiche de manière détaillée des <a href="@@metering-in-ardour">
+		  informations de niveau dBFS</a> ainsi qu'un spectogramme (niveau dBFS
+		en fonction du temps))</td></tr>
+  <tr><th>Analyse Spectrale&hellip;</th>
+	
+	<td>Ouvre la fenêtre <kbd class="menu">Rapport/Analyse Audio</kbd> , qui
+	  affiche le spectre d'amplitude de la région (niveau dBFS en fonction de la
+	  fréquence)</td></tr>
+	<tr><th colspan="2">Montage</th></tr>
+  <tr><th class="sub1">Combiner</th>
+	
+	<td>Crée une nouvelle région en réunissant les régions audio
+	  sélectionnées sur une même piste et les remplace par celle-ci. La création
+	  se fait en respectant les mêmes règles que pour la lecture, par exemple en
+	  ce qui concerne la superposition des régions.</td></tr>
+
 		<tr><th class="sub1">Uncombine</th><td>Splits back the compound created by <em>combining</em> into its original audio regions</td></tr>
 		<tr><th class="sub1">Pitch Shift&hellip;</th><td>Changes the tune of the audio region, by octave, semitones or percentage, based on spectral analysis. Optionally, and if they have been set for the region, preserves the formants</td></tr>
 		<tr><th class="sub1">Split at Percussion Onset</th><td>Allows splitting the selected regions on its Percussion Onsets marker as set by the Rhythm Ferret (Not usable as of 5.5)</td></tr>
