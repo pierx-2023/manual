@@ -43,11 +43,11 @@
   <tr><th class="sub1">Régler l'intervalle sur les régions sélectionnées</th>
 	<td>Comme ci-dessus, mais d'après les régions sélectionnées (du début de la
 	  région la plus précoce à la fin de la région la plus tardive)</td></tr>
-  <tr><th class="sub1">Tout sélectionner APRÈS le point de montage</th>
+  <tr><th class="sub1">Tout Sélectionner APRÈS le point de montage</th>
 	<td> Sélectionne toutes les régions et les points d'automation situés après
 	  le point de montage même si la région commence avant. Si des pistes sont
 	  sélectionnées, cela ne sélectionne que parmi celles-ci.</td></tr>
-  <tr><th class="sub1">Tout sélectionner AVANT le point de montage</th>
+  <tr><th class="sub1">Tout Sélectionner AVANT le point de montage</th>
 	<td>Comme ci-dessus mais avant le point de montage (à sa gauche)</td></tr>
   <tr><th class="sub1">Sélectionner Tout ce que l'intervalle chevauche</th>
 	<td>Sélectionne toutes les régions et les points d'automation dont une partie
@@ -62,26 +62,26 @@
 	  celles-ci</td></tr>
   <tr><th class="sub1">Sélectionner Tout dans l'intervalle de Boucle</th>
 	<td>Comme ci-dessus mais basé sur les repères de Boucle</td></tr>
-  <tr><th class="sub1">Déplacer le début de l'intervalle à la bordure de la région
+  <tr><th class="sub1">Déplacer le début de la sélection à la bordure de la région
 	  précédente</th>
-	<td>Déplace le repère gauche de l'intervalle jusqu'au début de la région ou
+	<td>Déplace le repère gauche de l'intervalle de sélection jusqu'au début de la région ou
 	  à la fin de la région précédente. L'extension se fait au plus proche, selon
 	  les pistes sélectionnées.</td></tr>
-  <tr><th class="sub1">Déplacer le début de l'intervalle à la bordure de la région
+  <tr><th class="sub1">Déplacer le début de la sélection à la bordure de la région
 	  suivante</th>
 	<td>Comme ci-dessus mais vers la droite (l'intervalle de sélection se réduit)</td></tr>
   <tr><th class="sub1">Déplace la fin de la sélection vers la bordure de la
 	  région précédente</th>
-	<td>Comme ci-dessus mais le repère droit va vers la gauche (la sélection se
-	  réduit)</td></tr>
+	<td>Comme ci-dessus mais le repère droit va vers la gauche (l'intervalle de
+	  sélection se réduit)</td></tr>
   <tr><th class="sub1">Déplace la fin de la sélection vers la bordure de la région
 	  suivante</th>
-	<td>Comme ci-dessus mais le repère droit va vers la droite (la sélection
-	  s'aggrandit)</td></tr>
+	<td>Comme ci-dessus mais le repère droit va vers la droite (l'intervalle de
+	  sélection s'aggrandit)</td></tr>
   <tr><th class="sub1">Début d'intervalle</th>
 	<td>Défini le bord gauche de la sélection au point de montage</td></tr>
   <tr><th class="sub1">Fin d'intervalle</th>
-	<td>Défini le bord droit de l'intervall au point de montage</td></tr>
+	<td>Défini le bord droit de la sélection au point de montage</td></tr>
   <tr><th class="sub1">Sélectionner la piste ou le bus suivant</th>
 	<td>Sélectionne la piste ou le bus située sous la piste actuellement
 	  sélectionnée. Si plusieurs pistes sont sélectionnées, il est seulement tenu
@@ -94,9 +94,10 @@
 	<td>Couper les parties des régions qui se trouvent en dehors de l'intervalle
 	  sélectioné. Cela ne s'applique qu'aux régions dont une partie au moins est
 	  dans la sélection temporelle</td></tr>
-  <tr><th>Scinder/Séparer</th>
-	<td>Scinder au point  de montage les régions sélectionnées et séparer chacune
-	  d'elles en deux nouvelles régions</td></tr>
+  <tr><th>Scinder</th>
+	<td>Toutes les régions sélectionnées sont séparées en deux nouvelles. Pour
+	  chacune d'elles, la première va du début de la région initial au point de
+	  montage et la 2ème du point de montage à la fin de la région initiale.</td></tr>
   <tr><th colspan="2">Séparer</th></tr>
   <tr><th class="sub1">Séparer dessous</th>
 	<td>Supprime les parties des régions se trouvant sous la région sélectionnée.
@@ -104,9 +105,8 @@
 	  la piste</td></tr>
   <tr><th class="sub1">Séparer selon l'intervalle de Boucle</th>
 	<td>Coupe les régions sélectionnées ou bien les régions des pistes
-	  sélectionnées, suivant les repères de début et de fin de l'intervalle de
-	  Boucle. S'il n'y a aucune sélection, cela s'exécute sur toutes les pistes
-	  à la fois</td></tr>
+	  sélectionnées selon les repères de l'intervalle de Boucle. S'il n'y a pas de
+	  sélection, cela agit sur toutes les pistes à la fois</td></tr>
   <tr><th class="sub1">Séparer selon l'intervalle de Punch</th>
 	<td>Comme ci-dessus mais selon les repères de Punch</td></tr>
 	<tr><th colspan="2">Consolider</th></tr>
@@ -119,7 +119,7 @@
 	<td>Comme ci-dessus mais avec les traitements (effets, greffons, gain&hellip)
 	  appliqués avant la réunion.</td></tr>
   <tr><th class="sub1">Joindre</th>
-	<td>Réunir les régions sélectionnées appartenant à la même piste en une seule
+	<td>Réunir les régions sélectionnées appartenant à la même piste, en une seule
 	  (audio ou MIDI mais pas les deux).</td></tr>
   <tr><th class="sub1">Disjoindre</th>
 	<td>(Audio seulement) sépare des régions jointes  pour les remettre dans leurs
@@ -159,23 +159,23 @@
 	<td>Comme ci-dessus mais pour le fondu de sortie.</td></tr>
   <tr><th class="sub1">&square; Fondu de sortiet</th>
 	<td>Active ou désactive la fondu de sortie de la région sélectionnée</td></tr>
-  <tr><th colspan="2">Analyzer</th></tr>
+  <tr><th colspan="2">Analyseurr</th></tr>
   <tr><th class="sub1">Analyse spectrale</th>
 	<td>Pour l'intervalle et les pistes sélectionnées, affiche l'Analyse spectrale
 	  sous la forme d'une courbe niveaux dBFS en fonction de la fréquence.</td></tr>
   <tr><th class="sub1">Analyse de la sonie</th>
 	<td>Pour l'intervalle sélectionné, un onglet par piste, affiche le
-	  <a href="@@export-dialog#export_analyze">Rapport et analyse audio</a> en
-	  montrant notamment une courbe niveaux dBFS en fonction du temps.</td></tr>
+	  <a href="@@export-dialog#export_analyze">Rapport/Analyse de l'audio</a> en
+	  affichant notamment une courbe niveaux dBFS en fonction du temps.</td></tr>
   <tr><th class="sub1">Assistant de sonie</th>
 	<td>Pour l'intervalle et les pistes sélectionnées, affiche l'
-	  <a href="@@loudness-analyzer">analyseur de sonie et normalisation</a>.</td></tr>
+	  <a href="@@loudness-analyzer">Analyseur de sonie et Normalisation</a>.</td></tr>
   <tr><th>Etiqueter la dernière prise</th>
-	<td>Invite pour créer une étiquette du dernier enregistrement. Elle sera visible
+	<td>Invite pour créer une étiquette pour le dernier enregistrement. Elle sera visible
 	  dans la <a href="@@the-region-list">Liste des régions</a></td></tr>
   <tr><th>Effacer la dernière prise</th>
 	<td>Détruit le dernier enregistrement. Une invite informe l'utilisateur du
-	  caractère <em>non réversible</em> de cette commande.</td></tr>
+	  caractère <em>irréversible</em> de cette commande.</td></tr>
   <tr><th colspan="2">Point de montage</th></tr>
   <tr><th class="sub1">Changer le point de montage</th>
 	<td>Alterne entre la souris et la tête de lecture comme point de montage.</td></tr>
@@ -188,9 +188,10 @@
   <tr><th colspan="2">Aimantation &amp; Grille</th></tr>
   <tr><th class="sub1">Quantification précédente de la grille</th>
 	<td>Revient au choix de quantification précédent dans la liste de la grille
-	  d'aimantation.</td></tr>
+	  d'aimantation selon la liste.</td></tr>
   <tr><th class="sub1">Quantification suivante de la grille</th>
-	<td> Passe au choix de quantification suivant de la grille d'aimantation.</td></tr>
+	<td> Passe au choix de quantification suivant de la grille d'aimantation selon
+	  la liste.</td></tr>
   <tr><th class="sub1">&cir; Pas de grille</th><td>Désactive l'
 	  <a href="@@grid-controls">aimantation'</a>, permet un déplacement libre des
 	  régions et bordures.</td></tr>
@@ -200,34 +201,35 @@
   <tr><th class="sub1">&cir; Noire &rarr; Triple-Croche</th>
 	<td>Sélectionne la valeur de note de musique comme grille d'aimantation</td></tr>
   <tr><th class="sub1">&cir; Code temporel</th>
-	<td>Aimante à l'image, un code temporel étant H:Min:Sec:Image. Le nombre d'
+	<td>Aimante à l'image (un code temporel est h:min:s:image). Le nombre d'
 	  images par seconde est défini dans les
 	  <a href="@@session-properties#properties-timecode">Propriétés de session</a>.</td></tr> 
   <tr><th class="sub1">&cir; Trames de CD</th><td>Aimantation à la trame de CD,
 	  càd 1/75<sup>ème</sup> de seconde.</td></tr>
 	<tr><th colspan="2">Tempo</th></tr>
-  <tr><th class="sub1">Régler le tempo d'après la région = Mesure</th>
+  <tr><th class="sub1">Tempo d'après la région = Mesure</th>
 	<td>Calcul le tempo de façon à ce que la durée de la première région
 	  sélectionnée soit une mesure. Ardour demande à l'utilisateur s'il souhaite
 	  ajuter le tempo global de la session ou bien s'il préfère placer un
 	  marqueur de tempo au début de la région utilisée.</td></tr>
-  <tr><th class="sub1">Tempo selon l'intervalle de montage = Mesure</th>
-	<td>Idem mais avec l'intervalle plutôt que la région.</td></tr>
+  <tr><th class="sub1">Tempo d'après l'intervalle de montage = Mesure</th>
+	<td>Idem mais avec l'intervalle de montage plutôt que la région.</td></tr>
   <tr><th>&square; Mode Malin</th>	
 	<td>Bascule en mode Malin. La souris est en mode Intervalle dans la partie
 	  supérieure de la région et en mode Saisie dans la partie inférieure.</td></tr>
   <tr><th>&square; Afficher l'automation au toucher</th>	
-	<td>Quand l'option est activée, cliquer sur un paramètre de greffon, un
-	  contrôle externe, etc&hellip; Ardour affiche la ligne
+	<td>Lorsque cette option est activée, cliquer sur un paramètre de greffon, un
+	  contrôle externe, etc&hellip; affiche la ligne
 	  d'<a href="@@automation">automation</a> adéquate.</td></tr>
   <tr><th colspan="2">Scripts Lua</th></tr>
   <tr><th class="sub1">&square; Gestionnaire de script</th>
 	<td>Affiche le <a href="@@lua-scripting">gestionnaire de script</a>, ce qui
 	  permet d'utiliser et de gérer les scripts Lua de la session.</td></tr>
-  <tr><th class="sub1"><em>Action script #n</em></th>
+  <tr><th class="sub1"><em>Action #n</em></th>
 	<td>Execute le <em>n</em>-ième script. La liste des scripts est définie dans
 	  le Gestionnaire de Script.</td></tr>
   <tr><th>Préférences</th>
 	<td>Affiche le panneaux des <a href="@@preferences">Préférences</a> qui permet
-  de modifier les réglages d'Ardour'</td></tr>
+	  de modifier les réglages d'Ardour. Sur le système MacOS, ce sous-menu est dans
+	  le menu de l'application</td></tr>
 </table>
