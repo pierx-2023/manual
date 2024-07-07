@@ -1,105 +1,233 @@
 
 <p>
-	The <dfn>Edit</dfn> menu groups together the actions related to the edition, and so will be mostly used while in Editor mode.
+  Le menu <dfn>Édition</dfn> regroupe toutes les fonctions de montage et sera donc
+  utilisé principalement dans le mode Montage
 </p>
 <table class="dl">
-	<tr><th>Undo (<em>action</em>)</th><td>Reverts the last editing operation, namely <em>action</em></td></tr>
-	<tr><th>Redo</th><td>Does the last editing operation again, after an Undo</td></tr>
-
-	<tr><th>Undo Selection Change</th><td>Reverts the last selection operation</td></tr>
-	<tr><th>Redo Selection Change</th><td>Does the last selection operation again after an Undo Selection Change</td></tr>
-
-	<tr><th>Cut</th><td>Deletes the current selection, but puts it in memory ready to be pasted</td></tr>
-	<tr><th>Copy</th><td>Copies the current selection to memory</td></tr>
-	<tr><th>Paste</th><td>Pastes the memory at the <a href="@@edit-point-control">edit point</a>, after a Cut or Copy operation</td></tr>
-
-	<tr><th colspan="2">Select</th></tr>
-		<tr><th class="sub1">Select All Objects</th><td>Selects all the regions and automation points in the session</td></tr>
-		<tr><th class="sub1">Select All Tracks</th><td>Selects all the tracks, busses and control masters in the session</td></tr>
-		<tr><th class="sub1">Select All Visible Lanes</th><td>Selects all the visible tracks, busses and control masters, i.e. those marked <kbd class="check">v</kbd> in the <a href="@@editor-lists">Editor List</a></td></tr>
-		<tr><th class="sub1">Deselect All</th><td>Deselects all objects or tracks, nothing is selected</td></tr>
-		<tr><th class="sub1">Invert Note Selection</th><td>Select the previously unselected regions, and deselect the previously selected ones</td></tr>
-
-		<tr><th class="sub1">Set Range to Loop Range</th><td>Creates a range selection on the selected tracks, based on the selected loop markers, and switches to <a href="@@toolbox">Range Mode tool</a></td></tr>
-		<tr><th class="sub1">Set Range to Punch Range</th><td>Same as above, based on the selected punch markers</td></tr>
-		<tr><th class="sub1">Set Range to Selected Regions</th><td>Same as above, based on the selected regions (i.e. from the start of the earliest region to the end of the latest one)</td></tr>
-
-		<tr><th class="sub1">Select All After Edit Point</th><td>Select all the regions and automation points that exist after the Edit Point, even if the region starts before it. If some tracks are selected, only selects on these tracks.</td></tr>
-		<tr><th class="sub1">Select All Before Edit Point</th><td>Same as above, but before the Edit point (i.e. to the left of it)</td></tr>
-		<tr><th class="sub1">Select All Overlapping Edit Range</th><td>Select all the regions and automation points of which at least a part is in the current selection range</td></tr>
-		<tr><th class="sub1">Select All Inside Edit Range</th><td>Selects all the regions that are completely inside the selection range, i.e. their start and end are inside the range. If some tracks are selected, only selects on these tracks.</td></tr>
-		<tr><th class="sub1">Select All in Punch Range</th><td>Selects all the regions of which a part in in the punch range. If some tracks are selected, only selects on these tracks.</td></tr>
-		<tr><th class="sub1">Select All in Loop Range</th><td>Same as above, based on the loop range</td></tr>
-
-		<tr><th class="sub1">Move Range Start to Previous Region Boundary</th><td>Extends the left boundary of the range to the left to the next region start or end. The region must be in the range.</td></tr>
-		<tr><th class="sub1">Move Range Start to Next Region Boundary</th><td>Same as above, to the right (reduces the selection)</td></tr>
-		<tr><th class="sub1">Move Range End to Previous Region Boundary</th><td>Same as above, with the right edge of the range, to the left (reduces the selection)</td></tr>
-		<tr><th class="sub1">Move Range End to Next Region Boundary</th><td>Same as above, with the right edge, to the right (extends the selection)</td></tr>
-
-		<tr><th class="sub1">Start Range</th><td>Sets the left edge of the range to the Edit point</td></tr>
-		<tr><th class="sub1">Finish Range</th><td>Sets the right edge of the range to the Edit point</td></tr>
-
-		<tr><th class="sub1">Select Next Track or Bus</th><td>Select the track or bus under the currently selected one. If multiple tracks are selected, only the first one is considered</td></tr>
-		<tr><th class="sub1">Select Previous Track or Bus</th><td>Same as above, with the track/bus above the first one selected.</td></tr>
-
-	<tr><th>Delete</th><td>Deletes all that is currently selected</td></tr>
-	<tr><th>Crop</th><td>Cuts the parts of the regions that are outside the range boundaries. Only applies on the regions that belong at least in part to the range.</td></tr>
-	<tr><th>Split/Separate</th><td>Cuts the selected regions at the Edit point, separating them in two regions</td></tr>
-	<tr><th colspan="2">Separate</th></tr>
-		<tr><th class="sub1">Separate Under</th><td>Removes all the parts of the regions that are under the selected one. Once done, the selected region is alone on its part of the track.</td></tr>
-		<tr><th class="sub1">Separate Using Loop Range</th><td>Cuts the selected regions or the regions on the selected tracks along the Loop range's start and end markers. If nothing is selected, acts on all tracks at once.</td></tr>
-		<tr><th class="sub1">Separate Using Punch Range</th><td>Same as above, with the Punch range markers</td></tr>
-	<tr><th colspan="2">Consolidate</th></tr>
-		<tr><th class="sub1">Consolidate Range</th><td>Group all parts of regions in the range and on the same track as one (Audio or MIDI but not both). Optionally, add it to the Cue Grid and/or to the Clip library.</td></tr>
-		<tr><th class="sub1">Consolidate Range (with processing)</th><td>Same as above, with processing (effects, plugins, gain&hellip) applied before grouping.</td></tr>
-		<tr><th class="sub1">Combine</th><td>Group all the selected regions belonging to the same track as one (Audio or MIDI but not both).</td></tr>
-		<tr><th class="sub1">Uncombine</th><td>(Audio only) splits back a compound into its original regions.</td></tr>
-	<tr><th colspan="2">Align</th></tr>
-		<tr><th class="sub1">Align Start</th><td>Moves the selected regions to align the beginning of the regions to the Edit point</td></tr>
-		<tr><th class="sub1">Align Start Relative</th><td>When multiple regions are selected, moves all the regions together as a block to align the beginning of the earliest one to the Edit point.</td></tr>
-		<tr><th class="sub1">Align End</th><td>Moves the selected regions to align the end of the regions to the Edit point</td></tr>
-		<tr><th class="sub1">Align End Relative</th><td>When multiple regions are selected, moves all the regions together as a block to align the end of the latest one to the Edit point.</td></tr>
-		<tr><th class="sub1">Align Sync</th><td>Moves the selected regions to align the Sync point of the regions to the Edit point</td></tr>
-		<tr><th class="sub1">Align Sync Relative</th><td>When multiple regions are selected, moves all the regions together as a block to align the earliest Sync point to the Edit point.</td></tr>
-	<tr><th colspan="2">Fade</th></tr>
-		<tr><th class="sub1">Fade Range Selection</th><td>For all the regions that either begin or end in the range, create a fade in or out on the regions length.</td></tr>
-		<tr><th class="sub1">Set Fade In Length</th><td>If the edit point is within the region boundaries, adjusts selected audio regions' fade in to end at the edit point.</td></tr>
-		<tr><th class="sub1">&square; Fade In</th><td>Toggles the fade in on the selected region on or off</td></tr>
-		<tr><th class="sub1">Set Fade Out Length</th><td>Same as above, for the fade out</td></tr>
-		<tr><th class="sub1">&square; Fade Out</th><td>Toggles the fade out on the selected region on or off</td></tr>
-
-	<tr><th colspan="2">Analyze</th></tr>
-		<tr><th class="sub1">Spectral Analysis</th><td>For the selected range and tracks, shows the Spectral analysis, showing a frequency vs dBFS graph.</td></tr>
-		<tr><th class="sub1">Loudness Analysis</th><td>For the selected range, one tab per track, shows the <a href="@@export-dialog#export_analyze">Audio Report/Analysis</a>, showing in particular a time vs dBFS graph.</td></tr>
-		<tr><th class="sub1">Loudness Assistant</th><td>For the selected range and tracks, shows the <a href="@@loudness-analyzer">Loudness Analyzer and Normalizer</a>.</td></tr>
-
-	<tr><th>Tag Last Capture</th><td>Prompts for a text to tag the last record, this tag is visible in the <a href="@@the-region-list">Region list</a></td></tr>
-	<tr><th>Remove Last Capture</th><td>Destroy the last recording. A prompt reminds the user this <em>cannot</em> be undone.</td></tr>
-
-	<tr><th colspan="2">Edit point</th></tr>
-		<tr><th class="sub1">Change Edit Point</th><td>Toggles between the mouse and the playhead as the Edit point</td></tr>
-		<tr><th class="sub1">Change Edit Point Including Marker</th><td>Toggles between the mouse, the playhead and marker as the Edit point</td></tr>
-	<tr><th>Toggle Snap</th><td>Activates/deactivates snapping, which aligns region boundaries to the closest selected time marker when moved</td></tr>
-	<tr><th colspan="2">Snap &amp; Grid</th></tr>
-		<tr><th class="sub1">Previous Quantize Grid Choice</th><td>Changes the snap quantization to the previous one in the list below</td></tr>
-		<tr><th class="sub1">Next Quantize Grid Choice</th><td>Changes the snap quantization to the next one in the list below</td></tr>
-			
-		<tr><th class="sub1">&cir; No Grid</th><td>Disables <a href="@@grid-controls">snapping</a>, i.e. allows free movement of regions and boundaries</td></tr>
-		<tr><th class="sub1">&cir; Bar</th><td>Snaps to the closest musical bar, bars can be set and seen in the <a href="@@ruler">Ruler</a></td></tr>
-		<tr><th class="sub1">&cir; 1/4 Note &rarr; 1/28 (32nd septuplet)</th><td>Selects the division of musical time to snap to</td></tr>
-		<tr><th class="sub1">&cir; Timecode</th><td>Snaps to the closest frame, a timecode being Hrs:Min:Sec:Frame. The number of frames per second is defined in the <a href="@@session-properties#properties-timecode">Session Properties</a>.</td></tr>
-		<tr><th class="sub1">&cir; MinSec</th><td>Snaps to the closest second in the timeline.</td></tr>
-		<tr><th class="sub1">&cir; CD Frames</th><td>Snaps to the closest CD Frame, one CD frame being 1/75<sup>th</sup> of a second.</td></tr>
-
+  <tr><th>Annuler (<em>action</em>)</th>
+    <td>Annule la dernière <em>action</em>effectuée</td></tr>
+  <tr><th>Recommencer</th>
+    <td>Execute à nouveau la dernière action effectuée après l'appel à
+      <dfn class="menu">Annuler</dfn></td></tr>
+  <tr><th>Annuler la sélection</th>
+    <td>Revient à la précédente sélection</td></tr>
+  <tr><th>Rétablir la sélection</th>
+    <td>Rétablit la sélection effectuée avant l'appel à <dfn class="menu">Annuler
+	la Sélection</dfn></td></tr>
+  <tr><th>Couper</th>
+    <td>Effacer la sélection active et la conserve en mémoire pour être collée</td></tr>
+  <tr><th>Copier</th>
+    <td>Copier la sélection active en mémoire, sans l'effacer</td></tr>
+  <tr><th>Coller</th>
+    <td>Coller le contenu en mémoire au <a href="@@edit-point-control">point de
+	montage</a>, après un Couper ou un Copier</td></tr>
+  <tr><th colspan="2">Sélection</th></tr>
+  <tr><th class="sub1">Sélectionner tous les objets</th>
+    <td>Sélectionne toutes les régions et les points d'automation de la
+      session</td></tr>
+  <tr><th class="sub1">Sélectionner toutes les pistes</th>
+    <td>Sélectionne les pistes, les bus, et les sorties principales de la session</td></tr>
+  <tr><th class="sub1">Sélectionner tout le visible</th>
+	<td>Sélectionne toutes les pistes, les bus, les sorties principales visibles,
+	  c-à-d marquées <dfn class="check">v</dfn> dans la <a href="@@editor-lists">Liste de montage</a></td></tr>
+  <tr><th class="sub1">Tout déselectionner</th>
+	<td>Déselectionner tous les objets ou pistes. Plus rien n'est sélectionné</td></tr>
+  <tr><th class="sub1">Inverser la sélection de note</th>
+    <td>Sélectionne les régions qui ne sont pas sélectionnées et désélectionne celles
+      précédemment sélectionnées</td></tr>
+  <tr><th class="sub1">Régler l'intervalle sur l'intervalle de boucle</th>
+	<td>Crée une sélection temporelle pour les pistes sélectionnées, d'après les repères
+	  de la boucle sélectionnée et bascule sur l'outil <a href="@@toolbox">Mode Intervalle</a></td></tr>
+  <tr><th class="sub1">Régler l'intervalle sur l'intervalle de Punch</th>
+	<td>idem ci-dessus, d'après les repères de Punch</td></tr>
+  <tr><th class="sub1">Régler l'intervalle sur les régions sélectionnées</th>
+	<td>Comme ci-dessus, mais d'après les régions sélectionnées (du début de la
+	  région la plus précoce à la fin de la région la plus tardive)</td></tr>
+  <tr><th class="sub1">Tout sélectionner APRÈS le point de montage</th>
+	<td> Sélectionne toutes les régions et les points d'automation situés après
+	  le point de montage même si la région commence avant. Si des pistes sont
+	  sélectionnées, cela ne sélectionne que parmi celles-ci.</td></tr>
+  <tr><th class="sub1">Tout sélectionner AVANT le point de montage</th>
+	<td>Comme ci-dessus mais avant le point de montage (à sa gauche)</td></tr>
+  <tr><th class="sub1">Sélectionner Tout ce que l'intervalle chevauche</th>
+	<td>Sélectionne toutes les régions et les points d'automation dont une partie
+	  au moins est dans la sélection temporelle.</td></tr>
+  <tr><th class="sub1">Sélectionner Tout l'intervalle</th>
+	<td>Sélectionne toutes les régions complètement incluses dans la sélection
+	  temporelle: leur début et leur fin doivent être dans cet intervalle. Si des
+	  pistes sont sélectionnées, cela ne sélectionne que parmi celles-ci</td></tr>
+  <tr><th class="sub1">Sélectionner Tout dans l'intervalle de Punch</th>
+	<td>Sélectionne toutes les régions dont une partie est dans l'intervalle de
+	  Punch. Si des pistes sont sélectionnées, cela ne sélectionne que parmi
+	  celles-ci</td></tr>
+  <tr><th class="sub1">Sélectionner Tout dans l'intervalle de Boucle</th>
+	<td>Comme ci-dessus mais basé sur les repères de Boucle</td></tr>
+  <tr><th class="sub1">Déplacer le début de l'intervalle à la bordure de la région
+	  précédente</th>
+	<td>Déplace le repère gauche de l'intervalle jusqu'au début de la région ou
+	  à la fin de la région précédente. L'extension se fait au plus proche, selon
+	  les pistes sélectionnées.</td></tr>
+  <tr><th class="sub1">Déplacer le début de l'intervalle à la bordure de la région
+	  suivante</th>
+	<td>Comme ci-dessus mais vers la droite (l'intervalle de sélection se réduit)</td></tr>
+  <tr><th class="sub1">Déplace la fin de la sélection vers la bordure de la
+	  région précédente</th>
+	<td>Comme ci-dessus mais le repère droit va vers la gauche (la sélection se
+	  réduit)</td></tr>
+  <tr><th class="sub1">Déplace la fin de la sélection vers la bordure de la région
+	  suivante</th>
+	<td>Comme ci-dessus mais le repère droit va vers la droite (la sélection
+	  s'aggrandit)</td></tr>
+  <tr><th class="sub1">Début d'intervalle</th>
+	<td>Défini le bord gauche de la sélection au point de montage</td></tr>
+  <tr><th class="sub1">Fin d'intervalle</th>
+	<td>Défini le bord droit de l'intervall au point de montage</td></tr>
+  <tr><th class="sub1">Sélectionner la piste ou le bus suivant</th>
+	<td>Sélectionne la piste ou le bus située sous la piste actuellement
+	  sélectionnée. Si plusieurs pistes sont sélectionnées, il est seulement tenu
+	  compte de la première</td></tr>
+  <tr><th class="sub1">Sélectionner la piste ou le bus précédent</th>	
+	<td>Comme ci-dessus mais au dessus de la première piste sélectionnée</td></tr>
+  <tr><th>Supprimer</th>		
+	<td>Supprimer tout ce qui est sélectionné</td></tr>
+  <tr><th>Élaguer</th>
+	<td>Couper les parties des régions qui se trouvent en dehors de l'intervalle
+	  sélectioné. Cela ne s'applique qu'aux régions dont une partie au moins est
+	  dans la sélection temporelle</td></tr>
+  <tr><th>Scinder/Séparer</th>
+	<td>Scinder au point  de montage les régions sélectionnées et séparer chacune
+	  d'elles en deux nouvelles régions</td></tr>
+  <tr><th colspan="2">Séparer</th></tr>
+  <tr><th class="sub1">Séparer dessous</th>
+	<td>Supprime les parties des régions se trouvant sous la région sélectionnée.
+	  Une fois éxecuté, la région sélectionnée reste seule sur cette partie de
+	  la piste</td></tr>
+  <tr><th class="sub1">Séparer selon l'intervalle de Boucle</th>
+	<td>Coupe les régions sélectionnées ou bien les régions des pistes
+	  sélectionnées, suivant les repères de début et de fin de l'intervalle de
+	  Boucle. S'il n'y a aucune sélection, cela s'exécute sur toutes les pistes
+	  à la fois</td></tr>
+  <tr><th class="sub1">Séparer selon l'intervalle de Punch</th>
+	<td>Comme ci-dessus mais selon les repères de Punch</td></tr>
+	<tr><th colspan="2">Consolider</th></tr>
+  <tr><th class="sub1">Consolider l'intervalle</th>
+	<td>Réunir toutes les parties des régions se trouvant dans un intervalle et
+	  sur une même piste en une seule région (audio ou MIDI mais pas les deux).
+	  On peut dans le même temps les ajouter à la Grille de Cue et/ou à la
+	  bibliothèque de Clip.</td></tr>
+  <tr><th class="sub1">Consolider l'intervalle (avec traitements)</th>
+	<td>Comme ci-dessus mais avec les traitements (effets, greffons, gain&hellip)
+	  appliqués avant la réunion.</td></tr>
+  <tr><th class="sub1">Joindre</th>
+	<td>Réunir les régions sélectionnées appartenant à la même piste en une seule
+	  (audio ou MIDI mais pas les deux).</td></tr>
+  <tr><th class="sub1">Disjoindre</th>
+	<td>(Audio seulement) sépare des régions jointes  pour les remettre dans leurs
+	  états initiaux.</td></tr>
+	<tr><th colspan="2">Aligner</th></tr>
+  <tr><th class="sub1">Aligner le début</th>
+	<td>Déplace les régions sélectionnées afin d'aligner le début de ces régions
+	  sur le point de montage.</td></tr>
+  <tr><th class="sub1">Aligner le début relativement</th>
+	<td>Quand plusieurs régions sont sélectionnées, les déplace comme un seul bloc
+	  afin d'aligner le début de la région la plus précoce du groupe sur le point
+	  de montage.</td></tr>
+  <tr><th class="sub1">Aligner la fin</th>
+	<td>Déplace les régions sélectionnées afin d'aligner leur fin sur le point de
+	  montage.</td></tr>
+  <tr><th class="sub1">Aligner la fin relativement</th>
+	<td>Quand plusieurs région sont sélectionnées, les déplace comme un seul bloc
+	  afin d'aligner la fin de la région la plus tardive du groupe sur le point
+	  de montage.</td></tr>
+  <tr><th class="sub1">Aligner le point de Synchro</th>
+	<td>Déplace les régions sélectionnées afin d'aligner leur point de synchronisation
+	  sur le point de montage.</td></tr>
+  <tr><th class="sub1">Aligner le point de Synchro relativement</th>
+	<td>Quand plusieurs région sont sélectionnées, les déplace comme un seul bloc
+	  afin d'aligner le point de synchro le plus précoce sur le point de montage.</td></tr>
+  <tr><th colspan="2">Fondu</th></tr>
+  <tr><th class="sub1">Fondu d'une sélection temporelle</th>
+	<td>Pour toutes les régions qui soit commencent soit finissent dans cette
+	  sélection temporelle, crée une fondue d'entrée ou de sortie de la durée de
+	  la sélection.</td></tr>
+  <tr><th class="sub1">Définir la durée de fondu d'entrée</th>
+	<td>Modifie la durée de la fondu d'entrée pour qu'elle se finisse au point de
+	  montage. Celui-ci doit-être à l'intérieur de la région concernée.</td></tr>
+  <tr><th class="sub1">&square; Fondu d'entrée</th>
+	<td>Active ou désactive la fondu d'entrée de la région sélectionnée</td></tr>
+  <tr><th class="sub1">Définir la durée de fondu de sortie</th>
+	<td>Comme ci-dessus mais pour le fondu de sortie.</td></tr>
+  <tr><th class="sub1">&square; Fondu de sortiet</th>
+	<td>Active ou désactive la fondu de sortie de la région sélectionnée</td></tr>
+  <tr><th colspan="2">Analyzer</th></tr>
+  <tr><th class="sub1">Analyse spectrale</th>
+	<td>Pour l'intervalle et les pistes sélectionnées, affiche l'Analyse spectrale
+	  sous la forme d'une courbe niveaux dBFS en fonction de la fréquence.</td></tr>
+  <tr><th class="sub1">Analyse de la sonie</th>
+	<td>Pour l'intervalle sélectionné, un onglet par piste, affiche le
+	  <a href="@@export-dialog#export_analyze">Rapport et analyse audio</a> en
+	  montrant notamment une courbe niveaux dBFS en fonction du temps.</td></tr>
+  <tr><th class="sub1">Assistant de sonie</th>
+	<td>Pour l'intervalle et les pistes sélectionnées, affiche l'
+	  <a href="@@loudness-analyzer">analyseur de sonie et normalisation</a>.</td></tr>
+  <tr><th>Etiqueter la dernière prise</th>
+	<td>Invite pour créer une étiquette du dernier enregistrement. Elle sera visible
+	  dans la <a href="@@the-region-list">Liste des régions</a></td></tr>
+  <tr><th>Effacer la dernière prise</th>
+	<td>Détruit le dernier enregistrement. Une invite informe l'utilisateur du
+	  caractère <em>non réversible</em> de cette commande.</td></tr>
+  <tr><th colspan="2">Point de montage</th></tr>
+  <tr><th class="sub1">Changer le point de montage</th>
+	<td>Alterne entre la souris et la tête de lecture comme point de montage.</td></tr>
+  <tr><th class="sub1">Changer le point de montage en incluant le marqueur</th>
+	<td>Alterne entre la souris, la tête de lecture et le marqueur comme point de
+	  montage.</td></tr>
+  <tr><th>Basculer l'aimantation</th>
+	<td>Activer/désactiver l'aimantation qui aligne les bordures de région sur le
+	  plus proche marqueur temporel sélectionné, lors d'un déplacement.</td></tr>
+  <tr><th colspan="2">Aimantation &amp; Grille</th></tr>
+  <tr><th class="sub1">Quantification précédente de la grille</th>
+	<td>Revient au choix de quantification précédent dans la liste de la grille
+	  d'aimantation.</td></tr>
+  <tr><th class="sub1">Quantification suivante de la grille</th>
+	<td> Passe au choix de quantification suivant de la grille d'aimantation.</td></tr>
+  <tr><th class="sub1">&cir; Pas de grille</th><td>Désactive l'
+	  <a href="@@grid-controls">aimantation'</a>, permet un déplacement libre des
+	  régions et bordures.</td></tr>
+  <tr><th class="sub1">&cir; Mesure</th>
+	<td>Aimantation sur la mesure la plus proche. Les mesures peuvent être visualiséees
+	  et réglées dans la <a href="@@ruler">règle</a></td></tr>
+  <tr><th class="sub1">&cir; Noire &rarr; Triple-Croche</th>
+	<td>Sélectionne la valeur de note de musique comme grille d'aimantation</td></tr>
+  <tr><th class="sub1">&cir; Code temporel</th>
+	<td>Aimante à l'image, un code temporel étant H:Min:Sec:Image. Le nombre d'
+	  images par seconde est défini dans les
+	  <a href="@@session-properties#properties-timecode">Propriétés de session</a>.</td></tr> 
+  <tr><th class="sub1">&cir; Trames de CD</th><td>Aimantation à la trame de CD,
+	  càd 1/75<sup>ème</sup> de seconde.</td></tr>
 	<tr><th colspan="2">Tempo</th></tr>
-		<tr><th class="sub1">Set Tempo from Region = Bar</th><td>Computes the tempo so that the duration of the first selected region is 1 bar. Ardour prompts if the user wants it to be the global tempo, or a tempo marker at the beginning of the region used</td></tr>
-		<tr><th class="sub1">Set Tempo from Edit Range = Bar</th><td>Same thing, with the current Range instead of a region</td></tr>
-	<tr><th>&square; Smart Mode</th><td>Toggles the Smart Mode, allowing the mouse to be in Range Mode in the upper half of a region, and in Grab Mode in the lower half</td></tr>
-	<tr><th>&square; Show Automation Lane on Touch</th><td>When toggled on, clicking on a plugin parameter, hardware controller, etc&hellip; makes Ardour show the relevant <a href="@@automation">automation</a> lane</td></tr>
-
-	<tr><th colspan="2">Lua Scripts</th></tr>
-		<tr><th class="sub1">&square; Script Manager</th><td>Shows the <a href="@@lua-scripting">Script manager</a>, allowing to use and manage the Lua scripts in the session</td></tr>
-		<tr><th class="sub1"><em>Action script #n</em></th><td>Executes the <em>n</em>th script. The script list is defined in the Script Manager.</td></tr>
-
-	<tr><th>Preferences</th><td>Displays the <a href="@@preferences">Preferences</a> panels, allowing to change Ardour's behaviour</td></tr>
+  <tr><th class="sub1">Régler le tempo d'après la région = Mesure</th>
+	<td>Calcul le tempo de façon à ce que la durée de la première région
+	  sélectionnée soit une mesure. Ardour demande à l'utilisateur s'il souhaite
+	  ajuter le tempo global de la session ou bien s'il préfère placer un
+	  marqueur de tempo au début de la région utilisée.</td></tr>
+  <tr><th class="sub1">Tempo selon l'intervalle de montage = Mesure</th>
+	<td>Idem mais avec l'intervalle plutôt que la région.</td></tr>
+  <tr><th>&square; Mode Malin</th>	
+	<td>Bascule en mode Malin. La souris est en mode Intervalle dans la partie
+	  supérieure de la région et en mode Saisie dans la partie inférieure.</td></tr>
+  <tr><th>&square; Afficher l'automation au toucher</th>	
+	<td>Quand l'option est activée, cliquer sur un paramètre de greffon, un
+	  contrôle externe, etc&hellip; Ardour affiche la ligne
+	  d'<a href="@@automation">automation</a> adéquate.</td></tr>
+  <tr><th colspan="2">Scripts Lua</th></tr>
+  <tr><th class="sub1">&square; Gestionnaire de script</th>
+	<td>Affiche le <a href="@@lua-scripting">gestionnaire de script</a>, ce qui
+	  permet d'utiliser et de gérer les scripts Lua de la session.</td></tr>
+  <tr><th class="sub1"><em>Action script #n</em></th>
+	<td>Execute le <em>n</em>-ième script. La liste des scripts est définie dans
+	  le Gestionnaire de Script.</td></tr>
+  <tr><th>Préférences</th>
+	<td>Affiche le panneaux des <a href="@@preferences">Préférences</a> qui permet
+  de modifier les réglages d'Ardour'</td></tr>
 </table>
