@@ -1,54 +1,338 @@
-
 <p>
-  The <kbd class="menu">Session</kbd> menu groups together everything related to the session and the file operations.
+  le menu
+  <kbd class="menu">Session
+  </kbd> regroupe les fonctions liées à la
+  session et aux opérations sur les fichiers
+</p>
+<p>
+  The
+  <kbd class="menu">Session
+  </kbd> menu groups together everything related to
+  the session and the file operations.
 </p>
 
 <table class="dl">
-	<tr><th>New&hellip;</th><td>Creates a <a href="@@newopen-session-dialog">new</a> session</td></tr>
-	<tr><th>Open&hellip;</th><td>Opens an existing session</td></tr>
-	<tr><th>Recent&hellip;</th><td>Opens a list of recent sessions that can be opened</td></tr>
-	<tr><th>Close</th><td>Closes the current session (but not Ardour)</td></tr>
-
-	<tr><th>Save</th><td>Saves the current session</td></tr>
-	<tr><th>Save As&hellip;</th><td>Saves to a new session (with options)</td></tr>
-	<tr><th>Rename&hellip;</th><td>Changes the name of the session</td></tr>
-	<tr><th>Snapshot (&amp; keep working on current version)&hellip;</th><td>Create a <a href="@@snapshots">Snapshot</a> but any subsequent change will be saved to this session</td></tr>
-	<tr><th>Snapshot (&amp; switch to new version)&hellip;</th><td>Same thing, and any subsequent change will be saved to this new snapshot session</td></tr>
-	<tr><th>Save Template&hellip;</th><td>Saves the session as a <a href="@@session-templates">template</a>, without the audio</td></tr>
-	<tr><th>Archive&hellip;</th><td>Exports the session as a <a href="@@backup-and-sharing-of-sessions">compressed file</a> for archiving or sharing purposes, optionally compressing the audio to FLAC</td></tr>
+  <tr>
+	<th>Nouvelle&hellip;
+	</th>
 	
-	<tr><th>Add Track, Bus or VCA&hellip;</th><td>Adds a <a href="@@adding-tracks-busses-and-vcas">new track/bus/VCA</a> to the session, same as the <kbd class="menu">Track &gt; Add Track, Bus or VCA&hellip;</kbd></td></tr>
+	<td>Crée une
+	  <a href="@@newopen-session-dialog">nouvelle
+	  </a> session
+	</td>
+  </tr>
 
-	<tr><th>Import</th><td>Opens the <a href="@@adding-pre-existing-material">Import</a> windows, to add media to the session</td></tr>
-	<tr><th>Import PT session</th><td>Import a ProTools&copy; session file. Not everything in the original session can be imported.</td></tr>
-	<tr><th>Open Video&hellip;</th><td>Imports a <a href="@@video-timeline-and-monitoring">video file</a> in the session</td></tr>
-	<tr><th>Remove Video</th><td>Removes the video part of the session (the video timeline disappears)</td></tr>
-	<tr><th>Loudness Assistant&hellip;</th><td>Shows the Loudness Analyzer and Normalizer, allowing an in-depth analysis of the master bus' volume for the final export</td></tr>
-	<tr><th colspan="2">Export</th></tr>
-		<tr><th class="sub1">Quick Audio Export&hellip;</th><td><a href="@@quick-audio-export">Export</a> a selection or the entire session to audio with just a few settings</td></tr>
-		<tr><th class="sub1">Export to Audio File(s)&hellip;</th><td><a href="@@mixdown">Export</a> all or part of the session in audio form</td></tr>
-		<tr><th class="sub1">Stem export&hellip;</th><td><a href="@@export-dialog">Exports each track</a> as its own audio file (for e.g. DAW interchange)</td></tr>
-		<tr><th class="sub1">Export to Video File</th><td>Exports the session to a <a href="@@workflow-amp-operations">video file</a></td></tr>
+  <tr>
+	<th>Ouvrir&hellip;
+	</th>
 	
-	<tr><th>&square; Properties</th><td>Shows the <a href="@@session-properties">Session Properties</a> dialog, allowing to fine-tune the parameters of the current session</td></tr>
-	<tr><th colspan="2">Monitor Section</th></tr>
-		<tr><th class="sub1">&square; Use Monitor Section</th><td>Shortcut for the homonymous session property, adds a <a href="@@monitor-section">Monitor Section</a> to the Mixer</td></tr>
-		<tr><th class="sub1">&square; Mute</th><td>Shortcut for the global monitor "Mute" control also available in the mixer's Monitor Section</td></tr>
-		<tr><th class="sub1">&square; Dim</th><td>Shortcut for the global monitor "Dim" control also available in the mixer's Monitor Section</td></tr>
-		<tr><th class="sub1">&square; Mono</th><td>Shortcut for the global monitor "Mono" control also available in the mixer's Monitor Section</td></tr>
-	<tr><th colspan="2">Metadata</th></tr>
-		<tr><th class="sub1">Edit Metadata&hellip;</th><td>Opens the <a href="@@metadata">Metadata</a> window, where information about the session can be saved</td></tr>
-		<tr><th class="sub1">Import Metadata&hellip;</th><td>Creates the metadata by extracting them from another session</td></tr>
-
-	<tr><th colspan="2">Clean-Up</th></tr>
-		<tr><th class="sub1">Bring all media into session folder</th><td>Copies all the media files imported from outside the session folder in that folder, see <a href="@@cleaning-up-sessions">Cleaning up Sessions</a></td></tr>
-		<tr><th class="sub1">Rebuild Peak Files</th><td>Reinitializes the buffered images representing the audio files</td></tr>
-		<tr><th class="sub1">Clean-up Unused Sources&hellip;</th><td>Quarantines all the media files not used in the session to a specific sub-folder of the session</td></tr>
-		<tr><th class="sub1">Clean-up Unused Regions&hellip;</th><td>Deletes the regions that are not used in the session</td></tr>
-		<tr><th class="sub1">Flush Wastebasket</th><td>Deletes those quarantined files</td></tr>
+	<td>Ouvre une session existante
+	</td>
+  </tr>
+  <tr>
+	<th>Récentes&hellip;
+	</th>
 	
-	<tr><th>Lock</th><td>Locks the session by showing an Unlock window that (until clicked) blocks every action on Ardour's window</td></tr>
+	<td>Affiche la liste des session récemment ouverte
+	</td>
+  </tr>
+  <tr>
+	<th>Fermer
+	</th>
+	
+	<td>Ferme la session actuelle (sans fermer Ardour)
+	</td>
+  </tr>
 
-	<tr><th>Quit</th><td>Exits Ardour. Prompts for saving the session if it has been modified.</td></tr>
+  <tr>
+	<th>Sauvegarder
+	</th>
+	
+	<td>Sauvegarde les session en cours
+	</td>
+  </tr>
+  <tr>
+	<th>Sauvegarder sous&hellip;
+	</th>
+	
+	<td>Sauvegarde une nouvelle session (avec options)
+	</td>
+  </tr>
+  <tr>
+	<th>Renomer&hellip;
+	</th>
+	
+	<td>Changer le nom de la session
+	</td>
+  </tr>
+  <tr>
+	<th>Cliché (&amp; continuer à travailler sur la session actuelle)&hellip;
+	</th>
+	
+	<td> Crée un
+	  <a href="@@snapshots">Cliché
+	  </a> mais les changements suivants
+	  seront sauvegardé dans la session en cours
+	</td>
+  </tr>
+  <tr>
+	<th>Cliché (&amp; basculer sur la nouvelle version)&hellip;
+	</th>
+	
+	<td> Idem mais les changements seront sauvegardé dans ce cliché
+	</td>
+  </tr>
+  <tr>
+	<th>Sauvegarder un modèle&hellip;
+	</th>
+	
+	<td>Sauvegarder en tant que
+	  <a href="@@session-templates">modèle
+	  </a>, sans
+	  l'audio
+	</td>
+  </tr>
+  <tr>
+	<th>Archiver&hellip;
+	</th>
+	
+	<td>Exporter la session sous la forme d'un
+	  <a href="@@backup-and-sharing-of-sessions">fichier compressé
+	  </a> pour
+	  archiver ou partager, avec possibilité de compresser l'audio au format FLAC
+	</td>
+  </tr>
+  
+  <tr>
+	<th>Ajouter une piste, un bus ou un VCA&hellip;
+	</th>
+	
+	<td>Ajoute une
+	  <a href="@@adding-tracks-busses-and-vcas">nouvelle piste / bus / VCA
+	  </a>
+	  à la session. Même chose que le menu
+	  <kbd class="menu">Piste &gt; Ajouter
+		Piste, Bus ou VCA&hellip;
+	  </kbd>
+	</td>
+  </tr>
+
+  <tr>
+	<th>Importer
+	</th>
+	
+	<td>Ouvre la fenêtre d'
+	  <a href="@@adding-pre-existing-material">Importation
+	  </a>,
+	  pour ajouter un media à la session
+	</td>
+  </tr>
+  <tr>
+	<th>Importer une session PT
+	</th>
+	
+	<td>Importe un fichier de session ProTools&copy;. Tout ce qui est dans la
+	  session originale ne pourra pas forcément être importé.
+	</td>
+  </tr>
+  <tr>
+	<th>Ouvrir Vidéo&hellip;
+	</th>
+	
+	<td>Importe un
+	  <a href="@@video-timeline-and-monitoring">fichier vidéo
+	  </a>
+	  dans la session.
+	</td>
+  </tr>
+  <tr>
+	<th>Supprimer une Vidéo
+	</th>
+	
+	<td>Supprime la partie vidéo de la session (la ligne temporelle vidéo
+	  disparait)
+	</td>
+  </tr>
+  <tr>
+	<th>Assistant de sonie&hellip;
+	</th>
+	
+	<td>Affiche l'analyseur de Sonie pour permettre une analyse précise du bus de
+	  sortie principal avant l'export final.
+	</td>
+  </tr>
+  <tr>
+	<th colspan="2">Exporter
+	</th>
+  </tr>
+  <tr>
+	<th class="sub1">Export audio rapide&hellip;
+	</th>
+	
+	<td>
+	  <a href="@@quick-audio-export">Exporte
+	  </a> l'audio de la sélection ou de
+	  toute la session, avec seulement quelques réglages.
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Export vers un(des) fichier(s) audio&hellip;
+	</th>
+	
+	<td>
+	  <a href="@@mixdown">Exporte
+	  </a> l'audio de tout ou partie de la
+	  session, avec des réglages précis.
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Export de fragments&hellip;
+	</th>
+	
+	<td>
+	  <a href="@@export-dialog">Exporte
+	  </a> un fichier audio par
+	  piste (pour les importer dans d'autre logiciel audio, par exemple)
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Export vers fichier vidéo
+	</th>
+	
+	<td>Exporte la session vers un
+	  <a href="@@workflow-amp-operations">fichier vidéo
+	  </a>
+	</td>
+  </tr>
+  
+  <tr>
+	<th>&square; Propriétés
+	</th>
+	
+	<td>Ouvre la fenêtre
+	  <a href="@@session-properties">Propriétés de la Session
+	  </a>,
+	  pour régler les propriétés de la session actuelle.
+	</td>
+  </tr>
+  <tr>
+	<th colspan="2">Section d'écoute de contrôle
+	</th>
+  </tr>
+  <tr>
+	<th class="sub1">&square; Utiliser la section d'écoute de contrôle
+	</th>
+	
+	<td>Raccourci vers la propriété de session du même nom. Ajoute une
+	  <a href="@@monitor-section">section d'Écoute
+	  </a> à la table de mixage
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">&square; Muet
+	</th>
+	
+	<td>Raccourci pour la "Sourdine" globale de la section d'écoute, disponible
+	  dans la section d'écoute de la table de mixage
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">&square; Atténuer
+	</th>
+	
+	<td>Raccourci pour l'"atténuation" globale de la section d'écoute, disponible
+	  dans la section d'écoute de la table de mixage
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">&square; Mono
+	</th>
+	
+	<td>Raccourci pour la mise en "mono" globale de la section d'écoute,
+	  disponible dans la section d'écoute de la table de mixage
+	</td>
+  </tr>
+  <tr>
+	<th colspan="2">Meta-données
+	</th>
+  </tr>
+  <tr>
+	<th class="sub1">Editer les méta-données&hellip;
+	</th>
+	
+	<td>Ouvre la fenêtre des
+	  <a href="@@metadata">Méta-données
+	  </a>, où l'on peut
+	  sauvegarder des informations sur la session
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Importer les méta-données&hellip;
+	</th>
+	
+	<td>Crée les méta-données de la session en les extrayant d'une autre
+	</td>
+  </tr>
+
+  <tr>
+	<th colspan="2">Nettoyer
+	</th>
+  </tr>
+  <tr>
+	<th class="sub1">Rassembler les médias
+	</th>
+	
+	<td>Copie tous les fichiers des médias extérieur à la session dans le dossier
+	  de la session, cf.
+	  <a href="@@cleaning-up-sessions">Nettoyer les sessions
+	  </a>
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Reconstruire le fichier de pics
+	</th>
+	
+	<td>Recrée le fichier de la représentation visuelle des fichiers son
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Nettoyer les sources inutilisées&hellip;
+	</th>
+	
+	<td>Déplace les fichiers des médias inutilisés dans la session vers un
+	  sous-dossier spécifique
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Nettoyer les régions inutilisées&hellip;
+	</th>
+	
+	<td>Efface les régions inutilisées dans la session
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Vider la corbeille
+	</th>
+	
+	<td>Supprime définitivement les fichiers supprimés
+	</td>
+  </tr>
+  
+  <tr>
+	<th>Verrouiller
+	</th>
+	
+	<td>Verrouille la session en affichant une fenêtre qui (tant qu'elle n'est
+	  pas cliquée) bloque toute action dans l'interface utilisateur d'Ardour
+	</td>
+  </tr>
+
+  <tr>
+	<th>Quitter
+	</th>
+	
+	<td>Ferme Ardour en proposant de sauvegarder si la session a été modifiée
+	</td>
+  </tr>
 </table>
 
