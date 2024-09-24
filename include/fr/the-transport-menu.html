@@ -1,0 +1,393 @@
+
+<p> Le menu
+  <dfn>Transport
+  </dfn>
+  gère les fonctions de lecture et la tête de lecture.
+</p>
+
+<table class="dl">
+  <tr>
+	<th>Lecture / Arrêt
+	</th>
+	<td>Démarre ou arrête la lecture, et l'enregistrement s'il est armé
+	</td>
+  </tr>
+  <tr>
+	<th colspan="2">Lecture
+	</th>
+  </tr>
+  <tr>
+	<th class="sub1">Lire la  Selection
+	</th>
+	  
+	  <td>Lit uniquement la durée sélectionnée, en se basant sur la sélection
+		temporelle ou sur les régions selectionnées
+	  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Sélection en Solo
+	</th>
+	  
+	<td>Lit uniquement les régions selectionnées dans la session. Les autres,
+	  même celles sur les pistes où des régions sont selectionnées, ne seront pas
+	  lues.
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecture avec Pre-roll
+	</th>
+		  <td>Lance la lecture en commençant quelques mesures ou quelques
+			secondes avant le début de la sélection (la durée est réglée dans
+			les
+			<a href="@@preferences#preferences-transport">Préférences
+			</a>)
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecture/Continuer/Arrêt
+	</th>
+		  <td>Quitte le mode Lecture en Boucle ou Lecture de la Sélection sans
+			stopper la lecture.
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecture au point de montage et retour
+	</th>
+	  
+	<td>Démarre la lecture au
+	  <a href="@@edit-point-control">Point de montage
+	  </a> et au moment elle est arrêtée, retourne à sa position initiale
+	</td>
+  </tr>
+	
+  <tr>
+	<th class="sub1">Lecture en Boucle
+	</th>
+	  
+	<td>Si un
+	  <a href="@@the-loop-range">intervalle de Boucle
+	  </a> est définie, le joue puis boucle jusqu'à l'arrêt de la lecture
+	</td>
+  </tr>
+  <tr>
+	<th>Démarrer l'enregistrement
+	</th>
+	  
+	  <td>Raccourci pour lancer en même temps la lecture et l'enregistrement 
+	  </td>
+  </tr>
+	
+  <tr>
+	<th>Stop et supprimer la prise
+	</th>
+	  
+	  <td>Arrête le transport, supprime ce qui vient d'être enregistré et
+		repositionne la tête de lecture à sa position initiale.
+	  </td>
+  </tr>
+	
+  <tr>
+	<th>Armer l'enregistrement
+	</th>
+	  
+	  <td>Arme l'enregistrement au niveau du transport de session. Quand la
+		lecture sera enclenchée, les pistes armées en enregistrement
+		enregistreront leurs entrées.
+	  </td>
+  </tr>
+  <tr>
+	<th>Enregistrer avec Pre-roll
+	</th>
+	  
+	  <td>Comme le menu Démarrer l'Enregistrement, mais l'enregistrement
+	  commence quelques mesures ou quelques secondes avant la position de la
+		tête de lecture (la durée est réglée dans les
+		<a href="@@preferences#preferences-transport">Préférences
+		</a>
+	  </td>
+  </tr>
+	
+  <tr>
+	<th>Enregistrer avec décompte
+	</th>
+	  
+	  <td>Comme le menu Démarrer l'Enregistrement, mais on attend 2 mesures
+	  avant de lancer l'enregistrement. La pulsation du métronome est entendue
+		pendant le décompte (même s'il est désactivé)
+	  </td>
+  </tr>
+
+  <tr>
+	<th>Bobiner
+	</th>
+	  
+	  <td>Lit en avant depuis la posiion de la tête de
+		lecture. Si la lecture est en cours, la vitesse augmente de 50&percnt;.
+	  </td>
+  </tr>
+  <tr>
+	<th>Rembobiner
+	</th>
+	  
+	<td>Lit en arrière depuis la posiion de la tête de lecture. Si la lecture
+	  est en cours, la vitesse augmente de 50&percnt;.
+	  </td>
+  </tr>
+  <tr>
+	<th>Lecture en avant
+	</th>
+	  
+	  <td>Lit en avant avec réinitialisation de la vitesse de lecture (lecture
+	  en temps réel).
+	  </td>
+  </tr>
+  <tr>
+	<th>Lecture en arrière Transition to Reverse
+	</th>
+	  
+	  <td>Lit en arrière avec réinitialisation de la vitesse de lecture (lecture
+	  en temps réel).
+	  </td>
+  </tr>
+
+  <tr>
+	<th>Boucle d'après la Sélection
+	</th>
+	  
+	<td>Converti la sélection en un
+	  <a href="@@the-loop-range">intervalle de Boucle
+	  </a> en plaçant les repères de boucle au début et à la fin de l'intervalle sélectionné
+	  </td>
+  </tr>
+  <tr>
+	<th>Punch d'après la sélection
+	</th>
+	  
+	<td>idem pour l'intervalle
+	  <a href="@@punch-range">Punch
+	  </a>
+	</td>
+  </tr>
+  <tr>
+	<th>Début/Fin de session d'après la sélection
+	</th>
+	  <td>Idem mais pour les repères de début et de fin de la session, ce qui définit la durée de la session.
+	  </td>
+  </tr>
+  <tr>
+	<th colspan="2">Tête de Lecture
+	</th>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur le curseur d'édition
+	</th>
+		  <td>Positionne la Tête de Lecture sur la position du pointeur de la
+		  souris
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur le repère actif
+	</th>
+		  <td>Si un repère est sélectionné, déplace la tête de Lecture sur ce repère
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Centrer le Lecteur
+	</th>
+	<td>Centre la vue sur la tête de Lecture sans modifier le zoom (le
+	  Lecteur se retrouve au centre de l'écran)
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Décaler en Avant
+	</th>
+		  <td>Déplace la Tête de Lecture vers la droite de la quantité définie
+		  par la
+			<a href="@@nudge-control">Taille du Décalage
+			</a>
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Décaler en Arrière
+	</th>
+	<td>Idem, vers la gauche
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Aller au transitoire suivant
+	</th>
+		  <td>Si un transitoire a été défini, place la tête de Lecture sur le
+		  suivant à droite
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Aller au transitoire précédent
+	</th>
+	<td>Idem, vers la gauche
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur la grille suivante
+	</th>
+		  <td>Quelque soit l'état du Mode Grille, va au prochain pas de grille à
+		  droite, tel que réglé par
+			<a href="@@grid-controls">aimantation/grille
+			</a>
+		  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur la grille précédente
+	</th>
+	<td>Idem, vers la gauche
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur la bordure de région suivante
+	</th>
+	  <td>Déplace la tête de Lecture vers la droite jusqu'à la fin de la région
+	  ou jusqu'au début de la région suivante de la piste sélectionnée ou de
+	  toutes les pistes sinon
+	  </td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur la bordure de région précédente
+	</th>
+	  	<td>Idem, vers la gauche
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur la bordure de région suivante (pas de
+	  piste sélectionnée)
+	</th>
+	<td>Déplace la tête de lecture jusqu'au prochain début ou à la prochaine fin
+	de région, que ce soit sur la piste sélectionnée ou bien sur une autre
+	</td>
+  </tr>
+  <tr>
+	<th class="sub1">Lecteur sur bordure de région précédente (pas de piste
+	sélectionnée) 
+	</th>
+	<td>Idem, vers la gauche
+	</td>
+  </tr>
+  <tr><th class="sub1">Lecteur sur Sync de Région Suivante</th>
+		  
+		  <td>Déplace le Lecteur sur le point de Synchro de la région suivant,
+			qui est en principe le début de la région. Mais il peut avoir
+			été <a href="@@grid-control">déplacé</a></td></tr>
+  <tr><th class="sub1">Lecteur sur Sync de Région Précédente</th>
+	
+		  <td>idem mais vers la rgauche (la région précédente)</td></tr>
+
+  <tr><th class="sub1">Aller au Repère Suivant</th>
+		  
+		  <td>Déplace le Lecteur
+		  jusqu'au <a href="@@creating-location-markers">marqueur</a> suivant
+		  sur la règle</td></tr>
+  <tr><th class="sub1">Aller au Repère Précédent</th>
+		  
+		  <td>Idem, à gauche</td></tr>
+
+  <tr><th class="sub1">Aller au Départ de Boucle</th>
+		  
+		  <td>déplace le Lecteur sur le repère de début
+		de <a href="@@the-loop-range">boucle</a>  s'il existe</td></tr>
+  <tr><th class="sub1">Aller à la Fin de Boucle</th>
+	
+		  <td>Idem pour le repère de Fin de Boucle</td></tr>
+		
+  <tr><th class="sub1">Aller au Zéro</th>
+	
+		  <td>Déplace le Lecteur au temps 00:00:00:00, sans tenir compte du Repère
+		  de Début de Session</td></tr>
+  <tr><th class="sub1">Aller au Début</th>
+	
+		  <td>Déplace le Lecteur sur le Repère de Début de Session</td></tr>
+  <tr><th class="sub1">Aller à la Fin</th>
+	
+		  <td>Déplace le Lecteur sur le Repère de Fin de Session</td></tr>
+  <tr><th class="sub1">Aller à la Grande Horloge</th>
+	
+		  <td>Déplace le Lecteur sur la valeur de l'Horloge Système (telle que
+			visible en haut à droite de la <a href="@@status-bar">barre de
+			status</a>) </td></tr>
+	<tr><th colspan="2">Repère Actif</th></tr>
+  <tr><th class="sub1">À la Bordure de Région suivante</th>
+	
+	<td>Déplace le <a href="@@working-with-markers">Repère</a> Sélectionné sur
+		  le  prochain Début ou Fin de Région</td></tr>
+  <tr><th class="sub1">À la Bordure de Région précédente</th>
+	
+		  <td>Idem, vers la gauche</td></tr>
+  <tr><th class="sub1">Au Sync de la Région Suivante</th>
+	
+		  <td>Déplace la Sélection sur le point de Synchro de la région suivante
+		  (qui est par défaut le début ou la fin de la région)</td></tr>
+  <tr><th class="sub1">Au Sync de la Région Précédente</th>
+	
+		  <td>Idem, à gauche</td></tr>
+	<tr><th colspan="2">Repères</th></tr>
+  <tr><th class="sub1">Créer un Repère à la Tête</th>
+	
+		  <td>Crée un Repère sur la position du Lecteur</td></tr>
+  <tr><th class="sub1">Supprimer un Repère à la Tête</th>
+	
+		  <td>Supprime tous les Repères à la position du Lecteur</td></tr>
+  <tr><th class="sub1">Basculer un Repère à la Tête</th>
+	
+		  <td>Combine les deux actions précédente: Crée un Repère s'il n'en
+		existe pas, et l'efface sinon</td></tr>
+
+  <tr><th class="sub1">Aller au Repère <em>n</em></th>
+	
+	<td>S'il existe, va au <em>n-ième</em></td></tr>
+
+  <tr><th class="sub1">Placer le Début de Session au Lecteur</th>
+	
+		  <td>Fixe le repère de Début de Session sur la position du Lecteur</td></tr>
+  <tr><th class="sub1">Placer la Fin de Session au Lecteur</th>
+	
+	<td>Fixe le repère de Fin de Session sur la position du Lecteur</td></tr>
+  <tr><th colspan="2">Cues</th></tr>
+  <tr><th class="sub1">Déclencher le Cue <em>A &rarr; H</em></th>
+	
+		  <td>Démarre la Lecture et Déclenche la ligne <em>A &rarr; H</em> de
+		  la <a href="@@cue-window-elements#cue_window_grid">Grille de Cue</a></td></tr>
+	
+  <tr><th>&square; Horloge Maître</th>
+	
+	  <td>Défini Ardour en temps qu'Horloge Maître. Ardour envoie les informations
+	  de synchronisation numérique à tout l'Audio</td></tr>
+  <tr><th>&square; Punch In/Out</th>
+	
+	  <td>Si les repères de PunchIn et de PunchOut ont été définis, l'enregistrement se fera seulement entre ces deux points</td></tr>
+  <tr><th>&square; Punch In</th>
+	
+	  <td>Si le repère de PunchIn a été défini, l'enregistrement ne se fera qu'à partir de ce point</td></tr>
+  <tr><th>&square; Punch Out</th>
+	
+	  <td>Si le repère de PunchOut a été défini, l'enregistrement ne peux se faire ou continuer au-delà de ce point</td></tr>
+  <tr><th>&square; Écoute Auto</th>
+	
+	  <td>Si coché, bascule automatiquement le <a href="@@monitor-setup-in-ardour">contrôle d'écoute'</a> du mode <em>Entrée</em> au mode <em>Lecture</em></td></tr>
+  <tr><th>&square; Suivre l'intervalle</th>
+	
+	  <td>Si coché, le fait de sélectionner un intervalle, déplace le lecteur au début de celui-ci</td></tr>
+  <tr><th>&square; Lecture Auto</th>
+	
+	  <td>Si coché, le fait de déplacer le Lecteur dans la règle démarre la lecture</td></tr>
+  <tr><th>&square; Retour Auto</th>
+	
+	  <td>Si coché, lorsque la lecture s'arrête, le Lecteur retourne à sa position précédente. Dans le cas contraire, le Lecteur reste là où la lecture s'est arrêté.</td></tr>
+  <tr><th>&square; Métronome</th>
+	
+	  <td>Active / Désactive la Piste de Clic (le métronome).</td></tr>
+  <tr><th>&square; Suivre le Lecteur</th>
+	
+	  <td>Si coché, lors de la lecture Ardour déplace l'écran visible lorsque le Lecteur atteint le bord droit, de manière à le laisser toujours visible</td></tr>
+  <tr><th>&square; Lecteur Fixe</th>
+	
+	<td>Si coché <em>et</em> si <kbd class="menu">Suivre le Lecteur</kbd> est coché, durant la lecture le Lecteur reste au centre de l'écran et la session se déplace</td></tr>
+	<tr><th>&square; Synchronisation externe du Transport</th><td> Si coché, le transport d'Ardout est contrôlé par un programme externe</td></tr>
+	<tr><th>Panique (Envoyer MIDI: "all-notes-off")</th><td>Arrête immédiatement la lecture de tous le MIDI (utile p.e. lors d'un bug MIDI)</td></tr>
+</table>
