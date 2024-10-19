@@ -1,0 +1,96 @@
+
+<p>
+  Dans Ardour , on peut ajouter des notes MIDI de différentes façons
+<p>
+
+<h2 id="add-new-notes-using-the-mouse">utiliser le souris</h2>
+
+<p>
+  Pour pouvoir dessiner des notes MIDI à la souris, il est nécessaire qu'une
+  piste MIDI <a href="@@create-midi-tracks">existe</a> et qu'une région MIDI ait
+  été <a href="@@create-midi-regions">créée</a> sur cette piste.
+</p>
+<p>
+  Que ce soit dans le <a href="@@toolbox">mode</a> <em>Dessin</em> ou dans le
+  mode  <em>Édition interne</em>, de nouvelles notes peuvent être insérées par
+  un clic ou un clic-glissé: un <em>clic</em> de souris crée une note là où se trouve
+  le pointeur (ou sur un point d'aimantation si l'aimantation est active) et sa
+  durée est d'une <a href="@@grid-controls">unité de la
+  grille</a>. Un <em>clic-glissé</em> de la souris permet de créer une note dont
+  la durée est celle de la tenue du clic.
+</p>
+
+<p>
+  La barre d'outils disponible dans le mode <em>dessin</em> permet de créer des
+  notes avec une durée exacte, pour un certain canal MIDI, avec une vélocité
+  prédéfinie: 
+</p>
+
+<figure>
+<img style="width:75%" src="/images/midi-draw-toolbar.png" alt="MIDI draw toolbar">
+<figcaption>Barre d'outils de dessin MIDI</figcaption>
+</figure>
+
+<p>
+  Même si le menu déroulant de la <dfn>Vélocité</dfn> ne montre certains
+  presets, lors d'un survol de la souris, la molette permet d'incrémenter la
+  valeur actuelle de 1.
+  While the <dfn>Velocity</dfn> drop-down list only displays presets, you can
+  hover it and use mouse wheel scrolling to increment the current value by
+  1. Scrolling above the other two drop-down lists will cycle through the
+  presets.
+</p>
+
+<p>
+  The <dfn>Auto</dfn> option in three drop-down lists works differently in all
+  three cases:
+</p>
+
+<table class="dl">
+  <tr>
+    <th>Length</th>
+    <td>The length will be defined by the grid snapping setting</td>
+  </tr>
+  <tr>
+    <th>Channel</th>
+    <td>This value will be inherited from the closest note</td>
+  </tr>
+  <tr>
+    <th>Velocity</th>
+    <td>The value will be an interpolation between two closest notes, the
+    position of the newly added note relative to either of the two notes will
+    also be taken into consideration</td>
+  </tr>
+</table>
+
+<h2 id="add-new-notes-using-step-entry">Using Step Entry</h2>
+
+<p>
+  The <a href="@@step-entry">Step Entry editor</a> allows to enter a melody in
+  sequence along time, using a virtual keyboard and specific controls. It can be
+  a very handy and fast way to create MIDI lines, in a kind of typewriter way,
+  all the more when using its different keyboard shortcuts.
+</p>
+<p>
+  The Step Entry window is shown by <kbd class="mouse">right</kbd> clicking the
+  record button in the <a href="@@midi-track-controls">MIDI track header</a> and
+  selecting <kbd class="menu">Step Entry</kbd>. This will automatically create a
+  MIDI region to type into at the playhead position, which will automatically
+  expand at each step.
+</p>
+
+<h2 id="add-new-notes-using-the-virtual-keyboard">Using the Virtual
+Keyboard</h2>
+
+<p>
+  The <a href="@@virtual-keyboard">Virtual MIDI Keyboard</a> &mdash; or a real
+  MIDI keyboard plugged in as the tracks input &mdash; can be used to record
+  MIDI, as a microphone would record audio.
+</p>
+<p>
+  It can be started by choosing the <kbd class="menu">Window &gt; Virtual
+  Keyboard</kbd> menu. Exactly like for audio recording, the track(s) must be
+  armed for recording, the main record engaged, then the transport started. As
+  for the Step Entry, a MIDI region will be auto-generated at the playhead
+  position, and expanded as long as the recording lasts.
+</p>
