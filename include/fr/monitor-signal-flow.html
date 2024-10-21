@@ -1,0 +1,63 @@
+
+<p>Il y a 3 façon d'apprhender le Contrôle d'Écoute
+</p>
+
+
+<h3>Contrôle d'Écoute Externe
+</h3>
+
+<figure class="right">
+    <img
+      src="/images/external-monitoring.png" alt="External monitoring" class="invert-in-dark">
+    <figcaption class="center">
+      Contrôle d'Écoute Externe
+    </figcaption>
+</figure>
+
+<p>Lorsque l'on uilise un
+  <dfn>contrôle d'écoute externe
+  </dfn>, Ardour ne joue aucun rôle dans le contrôle d'écoute. La configuration de l'enregistrement utilise
+  peut-être une table de mixage qui est utilisée pour gérer les mix de contrôles, ou bien la carte son
+  utilisée a une fonction "écoute des entrées". Cette approche conduit à une latence proche de zéro voir de
+  zéro. D'un autre côté, cela nécessite d'avoir du matériel, et les paramètres d'Écoute sont moins flexible
+  et ne seront pas suavé avec la session.
+</p>
+
+<h3 class="clear">Pilote Audio d'Écoute Matérielle
+</h3>
+
+<figure class="right">
+    <img
+      src="/images/jack-monitoring.png" alt="Hardware Monitoring" class="invert-in-dark">
+    <figcaption class="center">
+      Écoute matérielle
+    </figcaption>
+</figure>
+
+<p>Certaines cartes son permettent de router les signaux de leurs entrées vers leurs sorties avec une
+  latence nulle ou bien proche de zéro, fonction appelée
+  <dfn>écoute matériel
+  </dfn>. De plus, pour certaines cartes, cette fonction peut être controlée par Ardour. C'est très
+  pratique, si la carte le permet, car cela allie la praticité de gérer l'écoute avec Ardour tout en ayant
+  la même faible latence que permet le contrôle externe.
+</p>
+
+<h3 class="clear">Écoute logicielle
+</h3>
+
+<figure class="right">
+    <img
+      src="/images/ardour-monitoring.png" alt="Software Monitoring" class="invert-in-dark">
+    <figcaption class="center">
+      Écoute logicielle
+    </figcaption>
+</figure>
+
+<p>Avec l'utilisation de l'
+  <dfn>Écoute logicielle
+  </dfn> tout le contrôle d'écoute est réalisé par Ardour&mdash;cela rend les sorties de piste disponible en
+  entrées de piste, governed by various controls. Ce type d'écoute donne presque toujours plus de
+  flexibilité de routage qu'avec une écoute basée sur JACK. L'inconvénient est qu'il y aura une certaine
+  latence entre l'entrée et la sortie, qui dépend en grande partie du réglage de la taille du tampon.
+</p>
+
