@@ -1,0 +1,118 @@
+<p>Il est très attirant d'imaginer pouvoir acheter n'importe quel ordinateur,d'y
+  ajouter quelques logiciels et de pouvoir commencer à l'utiliser pour
+  enregistrer et créer de la musique. L'idée n'est pas forcément fausse, mais il
+  manque quelques détails importants. N'importe quel ordinateur acheté de nos
+  jours est apte à enregistrer et traiter quantité de données audio. Il possède
+  une interface audio qui accepte en entrée des micros ou des instruments
+  électroniques; il possèdera aussi un disque pour le stockage d'immense
+  quantités de fichiers audio.
+</p>
+<p>Par contre, lorsque l'on enregistre, monte ou mixe de la musique, il est
+  nécessaire d'avoir une faible <dfn>latence</dfn> entre le moment où le son est
+  généré et celui où il est entendu. Lorsqu'un signal audio passe dans
+  l'ordinateur, cela signifie qu'il doit recevoir le signal, le traiter et le
+  sortir aussi rapidement que possible. C'est là que devient crucial le sytème
+  informatique sous-jacent utilisé pour cela, parce que ce
+  n'est <strong>absolument pas</strong> le cas de <em>tous</em>
+
+<p>
+  Le routage de l'audio dans un ordinateur générera toujours un délai, mais s'il
+  est infime il ne sera pas audible. Il y a aussi des façons de travailler qui
+  font que ce délai n'est pas gênant (par exemple si l'audio n'est pas diffusé
+  sur des haut-parleurs)
+</p>
+
+<p>
+  Typiquement, la latence acceptable lorsque l'on traite d'audio numérique est
+  de 1 à 5&nbsp;ms. En comparaison, si l'on est assis à 1&nbsp;m d'une enceinte,
+  le son met 3&nbsp;ms à nous parvenir. N'importe quel ordinateur moderne peut
+  limiter la latence à 100&nbsp;ms; la plupart vont la limiter à 50&nbsp;ms;
+  quelques uns pourront descendre à moins de 10&nbsp;ms sans trop de
+  difficulté. Mais essayer de réduire le latence d'un ordinateur qui ne le peu
+  matériellement pas, va engendrer des artefacts et des clics audibles. Ce que
+  l'on ne souhaite évidemment pas.
+</p>
+
+<h2>Considérations matérielles</h2>
+
+<table class="dl">
+  <tr><th>Interface Vidéo</th>
+	<td>
+	  les interfaces vidéo de mauvaise qualité (ainsi que leurs pilotes) peuvent
+	  "accaparer" les ressources de l'ordinateur pendant longtemps, empêchant
+	  l'interface audio de gérer rapidement les données audio.</td></tr>
+  <tr><th>Interface Sans Fil</th>
+	<td>Certaines interfaces réseaux sans fil de mauvaise qualité (ainsi que
+	  leurs pilotes) peuvent aussi empêcher les interfaces audio de gérer les
+	  flux de données</td></tr>
+  <tr><th>Ports <abbr title="Universal Serial Bus">USB</abbr></th>
+	<td>
+	  Lorsque l'on utilise une interface audio connectée en USB, et parfois même
+	  si ce n'est pas le cas, la configuration USB de l'ordinateur peut faire
+	  une grosse différence. Très souvent, si l'on branche l'interface dans un
+	  port tiout va bien fonctionner mais si l'on en change les performances
+	  seront dégradées. On voit cela même sur des ordinateurs Apple.</td></tr>
+  <tr><th>Concentrateurs USB internes</th>
+	<td>
+	  Dans un monde idéal, tous les ports USB seraient branchés directement au
+	  bus USB principal. Certains ordinateurs portables (et peut-être certaines
+	  tours) ont un concentrateur USB interne ^lacé entre le bus interne et les
+	  ports, ce qui est source de problème avec de nombreux matériels USB, et
+	  donc avec certaines interfaces audio. Il est difficile de savoir lequel,
+	  sans l'avoir branché et testé.</td></tr>
+  <tr><th>Contrôle de la fréquence du <abbr title="Central Processing
+  Unit">Processeur</abbr></th>
+	<td>
+	  Pour gérer l'audio avec une faible latence, le processeur doit pouvoir
+	  fonctionner à sa fréquence maximale en permanence. Les ordinateurs
+	  portables vont ralentir la vitesse du processeur afin d'économiser la
+	  batterie. Pour l'audio à faible latence, cela doit être désactivé, soit
+	  dans le BIOS, soit au niveau du SE.</td></tr>
+  <tr><th>Excessive Interrupt Sharing</th>
+	<td>
+	  Si l'interface audio doit partager une routine d'interruption (une manière
+	  de dire au processeur que quelque chose nécessite son attention) avec trop
+	  d'autre appareils, cela peut empêcher l'interface audio de gérer
+	  correctement le flux de données. Pour les ordinateurs portables, il est
+	  rarement possible d'y remédier. Pour les tours, on peut généralement agir
+	  au niveau du BIOS en réassignant les interruptions..</td></tr>
+  <tr><th><abbr title="System Management Interrupt">SMI</abbr>s</th>
+	<td>
+	  le SMI est un ensemble d'interruptions déclenchées par la carte-mère pour
+	  informer l'ordinateur sur l'état de son matériel. On ne peut pas les
+	  désactiver de manière sûre, et certaines sont très longue à traiter. Le
+	  mieux est d'avoir une carte-mère qui n'en envoie pas. Ceci est une
+	  nécessité pour les système de traitement en temps réel, qui ont les mêmes
+	  problématique de latence.</td></tr>
+  <tr><th>Hyperthreading</th>
+	<td>
+	  Cette technologie tend à disparaitre avec l'apparition des UC
+	  multi-coeur. Les performances sont souvent très médiocre pour le
+	  traitement en temps réel. On peut parfois la désactiver dans le BIOS. Un
+	  processeur qui utilise l'hyperthreading sera particulièrement instable
+	  dans les situations de très faible latence en comparaison d'un sans cette
+	  technologie.</td></tr>
+  <tr><th>Vibrations excessives</th>
+	<td>
+	  Cela n'affecte pas le flux de données vers ou depuis l'interface audio,
+	  mais cela peut ralentir <em>fortement</em> les E/S vers un disque dur. Si
+	  l'on prévoit d'utiliser l'ordinateur dans un environement très bruyant
+	  (particulièrement dans les basses fréquences), il faut le placer de telle
+	  sorte que le disque dur ne soit pas soumis aux vibrations; elles vont
+	  physiquement déplacer les têtes de lecture du disque, créant des erreurs
+	  de lecture/écriture conduisant le disque à essayer de lire/écrire à
+	  nouveau, ce qui va fortement diminuer le débit de transmission de données
+	  depuis le disque. À éviter. Si vous ne nous croyez pas, regardez
+	  cette <a href="https://www.youtube.com/watch?v=tDacjrSCeq4">vidéo</a> qui
+	  montre les effets de hurlements sur les disques. Ce n'est plus un problème
+	  avec les disques SSD qui n'ont pas de pièces mobiles</td></tr>
+</table>
+
+<p>
+  Richard Ames propose une
+  longue <a href="https://www.youtube.com/watch?v=GUsLLEkswzE">vidéo</a> (28
+  minutes) bien utile pour comprendre ces problèmes de manière très
+  complète. Elle est très "Windows centré" mais les explications s'applique à
+  tous les systèmes et à tous les ordinateurs.
+</p>
+
