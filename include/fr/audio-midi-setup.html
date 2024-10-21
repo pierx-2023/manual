@@ -1,0 +1,85 @@
+<h2 class="clear">Configuration Audio & MIDI</h2>
+
+<figure class="center">
+  <img width="50%" src="/images/Audio-MIDI_Setup.png" alt="The Audio/MIDI Setup
+  Dialog"/>
+  <figcaption>
+	La boîte de dialogue Configuration Audio & MIDI
+  </figcaption>
+</figure>
+
+<p>
+  Cette fenêtre affiche les différentes options de réglages Audio et MIDI
+  (matériel et logiciel), qu'Ardour utilisera pour la session de travail en
+  cours.  Elle comporte:
+</p>
+
+<table class="dl">
+  <tr><th>Les Systèmes Audio</th>
+	<td>
+	  Selon le système d'exploitatio, Ardour va pouvoir utiliser différents
+    systèmes audio. Par exemple avec Linux, à la fois <abbr title="Advanced
+    Linux Sound Architecture"> ALSA</abbr>, PulseAudio, et <abbr title="JACK
+    Audio Connection Kit">JACK</abbr> seront disponibles. Avec MacOs X ce
+    sera <kbd class="menu">CoreAudio</kbd>. Les utilisateurs avertis pourront
+    utiliser sur toutes les plateformes, <kbd class="menu">NetJack</kbd> qui
+    fournis des E/S audio par le réseau.</td></tr>
+  <tr><th>Interface d'entrées</th>
+	<td>
+	  La sélection affiche toutes les interfaces disponibles fournies par le
+    système audio, ayant des entrées audio
+  </td></tr>
+  <tr><th>Interface de sorties</th>
+	<td>
+	  La sélection affiche toutes les interfaces disponibles fournies par le
+    système audio, ayant des sorties audio
+  </td></tr>
+  <tr><th>Féquence d'échantillonnage</th>
+	<td>
+	  La sélection affiche les fréquences d'échantillonnage disponible pour
+    l'interface audio choisie
+  </td></tr>
+  <tr><th>Taille de tampon</th>
+	<td>
+	  La taille du tampon utilisé par l'interface audio choisie pour diminuer la
+    latence (et augmenter la charge sur l'UC) ou bien l'inverse (latence élevée
+    et charge faible)
+  </td></tr>
+  <tr><th>Periods</th>
+  <td>
+    Number of frames between each hardware interrupt (analog-digital or
+    digital-analog conversion).
+  </td></tr>
+  <tr><th>Contrôle d'écoute matériel</th>
+	<td>
+	  Cette section permet de choisir si c'est Ardour ou l'interface qui gère le
+    contrôle d'écoute
+  </td></tr>
+  <tr><th>Configuration avancée</th>
+	<td>
+	  Cette section contient les réglages de bas-niveau dont la liste suit:
+  </td></tr>
+  <tr><th>Système MIDI</th>
+	<td>
+	  Le menu permet de choisir le pilote MIDI. Sur MacOS X, ce
+    sera <kbd class="menu">CoreMIDI</kbd>. Sur Linux, on choisira entre le
+    séquenceur ALSA et les ALSA raw devices. Choisissez "Aucun" pour désactiver
+    la connexion avec des applications MIDI externes et cacher les ports MIDI
+    d'Ardour de l'extérieur, tout en conservant le routage MIDI interne au
+    programme. </td></tr>
+  <tr><th>Réglage &amp; Calibration</th>
+	<td>
+	  Ce bouton déclenche un processus guidé, semi-automatique afin d'obtenir un
+    mesurage précis de la latence des ports MIDI matériels
+  </td></tr>
+  <tr><th>Latences matérielles d'E/S</th>
+	<td>
+	  Spécifier le délai matériel en échantillons, pour une compensation précise
+    de la latence.
+  </td></tr>
+  <tr><th>Calibrer l'audio</th>
+	<td>
+	  Ce bouton déclenche un processus guidé, semi-automatique afin d'obtenir un
+    mesurage précis de la latence des ports audio matériels
+  </td></tr>
+</table>
