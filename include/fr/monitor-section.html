@@ -1,0 +1,163 @@
+
+<figure class="right">
+    <img src="/images/monitoring-strip.png" alt="Le bandeau de monitorage">
+    <figcaption>
+      Le bandeau de monitorage
+    </figcaption>
+</figure>
+
+<p>
+  La <dfn>section d'écoute</dfn> est une fonction optionnelle qui fourni les sorties Pièce d'écoute / Enceintes de
+  monitorage. On l'active pour la session dans
+  la <a href="@@session-properties#properties-monitoring">fenêtre
+  <kbd class="menu">Session &gt; Propriétés</kbd></a> en activant l'option
+  <kbd class="option">Utiliser la section d'écoute dans la session</kbd> dans l'onglet
+  <kbd class="menu">Écoute de contrôle</kbd>. Par défaut la section d'écoute reçoit l'audio du bus
+  principal, mais selon le mode de Solo et d'autres fonctions telles que Audition, d'autres sources audio
+  peuvent être entendu de manière temporaire à la place.
+</p>
+<p>
+  Quand l'on clique le bouton "mon" du Bus Principal, la section d'écoute apparaît à sa droite. Il comprend:
+</p>
+<ol>
+  <li>Détacher/attacher le contrôle. Sépare la section de monitorage dans sa propre fenêtre.</li>
+  <li>Indicateurs de statut pour des fonctions importantes.</li>
+  <li>Sélection du comportement du Solo.</li>
+  <li>Cacher, afficher et statut de la section monitorage des traitement en ligne</li>
+  <li>Contrôle des niveaux des fonctionnalités de Solo</li>
+  <li>Contrôle de l'atténuation du monitorage</li>
+  <li>Individual monitor path controls</li>
+  <li>Fonctions Mute, Att et Mono des sorties de monitorage</li>
+  <li>Contrôle du niveau de monitorage</li>
+  <li>Routiage de la section de monitorage</li>
+</ol>
+
+<h2>Indicateurs de Statut</h2>
+
+<p>
+  les indicateurs de statut, dont 2 apparaissent dans <a href="@@about-ardours-interface">la barre de
+  transport</a>, clignotent pour indiquer qu'une fonction est active:
+</p>
+<ul>
+  <li><dfn>Solo</dfn>: Indique qu'une ou plusieurs pistes sont actuellement en mode Solo.
+  voir <a href="@@muting-and-soloing">Sourdine et Solo</a>. Un clic sur cet indicateur désactive les solos
+  actifs des pistes et bus sélectionnés</li>
+  <li><dfn>Audition</dfn>: Indique qu'un fichier audio est en écoute directe, par exemple lors de
+  l'importation d'un fichier ou en utilisant le menu contextuel <kbd class="menu">Audition</kbd> dans la
+	<a href="@@the-region-list">liste des régions</a>. Un clic sur cet indicateur annule l'écoute en
+	cours</li>
+  <li><dfn>Isolé</dfn>: Indique qu'une ou plusieurs pistes ou bus sont en mode solo isolé.
+  Voir <a href="@@muting-and-soloing">Sourdine et Solo</a>. Un clic sur cet indicateur annule toutes les
+  isolations.</li>
+</ul>
+
+<h2>Choix du comportement du Solo</h2>
+
+<p>
+  Les SiP, PFL et AFL sont excluant entre eux et sélectionne le mode solo. Solo Exclusif et
+  Solo Muet modifient ensuite le comportement du mode choisi. Voir <a href="@@muting-and-soloing">Sourdine
+  et Solo</a>.  Le mode en cours est indiqué par un voyant lumineux sur le bouton.
+</p>
+<table class="dl">
+  <tr><th>SiP</th><td>Selectionne <em>Solo En Place</em> en tant que mode de solo et annule le
+  précédent.</td></tr>
+  <tr><th>PFL</th><td>Selectionne <em>Écoute Pre Fader</em> en tant que mode de solo et annule le
+  précédent.</td></tr>
+  <tr><th>AFL</th><td>Selectionne <em>Écoute Après Fader</em> en tant que mode de solo et annule le
+  précédent.</td></tr>
+  <tr><th>Solo Excl.</th><td>Active/Désactive l'option <em>Solo Exclusif</em>.</td></tr>
+  <tr><th>Solo &raquo; Muet</th><td>Active/Désactive l'option <em>Solo Muet</em>.</td></tr>
+</table>
+
+<p class=note>
+  Changer le mode solo (Sip, PLF, ou AFL) met à jour l'indication de solo sur la tranche de mixage.
+</p>
+
+<h2>Le bouton de traitement</h2>
+
+<p>
+  Cliquer le bouton de traitement affiche ou masque la fenêtre de Traitement de la section d'écoute. Cela
+  fonctionne de la même manière que pour les <a href="@@audiomidi-mixer-strips">pistes</a> et
+  les <a href="@@audiomidi-busses-mixer-strips">bus</a>. Il est utilisé pour insérer un greffon, par exemple
+  un EQ pour corriger la pièce d'écoute ou bien un VU-mètre particulier.
+
+</p>
+<p>
+  Étant donné que ce traitement est spécifique à la section d'écoute, il ne s'applique qu'à l'audio routé
+  vers les sorties moniteurs
+</p>
+
+
+<h2>Contrôle du niveau de Solo</h2>
+
+<p>
+  Ces boutons contrôlent le niveau audio des pistes et bus dont le solo est actvé.
+</p>
+<table class="dl">
+  <tr><th>Solo Boost</th>
+	
+	<td>
+	  C'est le niveau qui sera ajouté au niveau de monitorage, lorsque le solo d'une piste ou d'un bus sera
+	  activé, permettant de régler un niveau d'écoute optimal pour les signaux isolés. Le potentiomètre
+	  permet de régler de +0dB à +10dB et permet un réglage continu entre ces deux valeurs. Un menu
+	  déroulant avec des valeurs pré-définies est disponible.
+  </td></tr>
+  <tr><th>SiP Cut</th>
+	
+	<td>Only relevant to Solo in Place mode. This sets the level that all muted tracks or busses will be
+  muted by. By default it is &minus;&infin; i.e. the non soloed tracks are totally inaudible.  The level can
+  be raised to make the other tracks audible, though dimmed. This is also sometimes referred to <em>Solo in
+  Front</em>. The rotary control has a range of &minus;&infin; to +0dB and can be set at any point between
+  these two values. A drop down menu with pre-defined values is also provided for convenience.
+  </td></tr>
+</table>
+
+<h2>Dim level control</h2>
+
+<p>
+  The Dim level control sets the amount by which the monitoring will be reduced when a Dim button is engaged.
+  The rotary control has a range of -20dB to 0dB and can be set at any point between these two values.
+  A drop down menu with pre-defined values is also provided for convenience.
+</p>
+
+<h2>Monitor path controls</h2>
+
+<p>
+  Each of the individual paths through the Monitor Section, (e.g. <kbd class="menu">L</kbd> and <kbd class="menu">R</kbd>
+  for stereo), can be controlled individually. Four functions are available:
+</p>
+<table class="dl">
+  <tr><th>Mute</th><td>Mutes the selected path(s)</td></tr>
+  <tr><th>Dim</th><td>Reduces the selected path(s) level by the amount set with the Dim level control</td></tr>
+  <tr><th>Solo</th><td>Solos the selected channel(s)</td></tr>
+  <tr><th>Inv</th><td>Inverts the selected channel(s) polarity</td></tr>
+</table>
+
+<h2>Global Monitor controls</h2>
+
+<p>
+  Those buttons directly affect the output of the monitoring section:
+</p>
+<ul>
+  <li><dfn>Mono</dfn>: sums all of the paths to a single mono signal and applies it to all Monitor Section outputs.</li>
+  <li><dfn>Dim</dfn>: Reduces overall monitor level by the amount set with the Dim level control.</li>
+  <li><dfn>Mute</dfn>: Mutes all monitoring.</li>
+</ul>
+
+<h2>Global Monitor level</h2>
+
+<p>
+  This control sets the level for Monitor Section output. The rotary control has a range of &minus;&infin;
+  to +6dB and can be set at any point between these two values. A drop down menu with pre-defined values
+  is also provided for convenience.
+</p>
+
+<h2>Monitoring Output routing</h2>
+
+<p>
+  Clicking on this button shows a menu that allows quick and convenient routing of the Monitor Section's
+  outputs to audio hardware outputs, e.g. to feed control room monitors.
+  It also has an option to open Ardour's routing matrix, where more detailed connectivity is available if
+  routing to something other than hardware is required.
+</p>
+
