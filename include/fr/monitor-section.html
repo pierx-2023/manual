@@ -7,29 +7,29 @@
 </figure>
 
 <p>
-  La <dfn>section d'écoute</dfn> est une fonction optionnelle qui fourni les sorties Pièce d'écoute / Enceintes de
-  monitorage. On l'active pour la session dans
+  La <dfn>section d'écoute de contrôle</dfn> (plus succintement appelé "monitorage") est une fonction
+  optionnelle qui fourni les sorties Pièce d'écoute / Moniteurs. On l'active pour la session dans
   la <a href="@@session-properties#properties-monitoring">fenêtre
   <kbd class="menu">Session &gt; Propriétés</kbd></a> en activant l'option
   <kbd class="option">Utiliser la section d'écoute dans la session</kbd> dans l'onglet
-  <kbd class="menu">Écoute de contrôle</kbd>. Par défaut la section d'écoute reçoit l'audio du bus
-  principal, mais selon le mode de Solo et d'autres fonctions telles que Audition, d'autres sources audio
-  peuvent être entendu de manière temporaire à la place.
+  <kbd class="menu">Écoute de contrôle</kbd>. Par défaut la section de monitorage reçoit l'audio du bus
+  Stéréo. Mais selon le mode de Solo ou d'autres fonctions telles qu'Audition, d'autres sources audio
+  seront entendues de manière temporaire, à la place.
 </p>
 <p>
-  Quand l'on clique le bouton "mon" du Bus Principal, la section d'écoute apparaît à sa droite. Il comprend:
+  Quand l'on clique le bouton "Mon" du Bus Stéréo, la section de monitorage apparaît à sa droite. Il comprend:
 </p>
 <ol>
-  <li>Détacher/attacher le contrôle. Sépare la section de monitorage dans sa propre fenêtre.</li>
-  <li>Indicateurs de statut pour des fonctions importantes.</li>
-  <li>Sélection du comportement du Solo.</li>
-  <li>Cacher, afficher et statut de la section monitorage des traitement en ligne</li>
+  <li>Détacher/attacher le contrôle. Détache la section de monitorage dans sa propre fenêtre</li>
+  <li>Indicateurs de statut pour des fonctions importantes</li>
+  <li>Sélection du comportement du Solo</li>
+  <li>Cacher, afficher et statut des traitements en ligne de la section de monitorage</li>
   <li>Contrôle des niveaux des fonctionnalités de Solo</li>
   <li>Contrôle de l'atténuation du monitorage</li>
-  <li>Individual monitor path controls</li>
+  <li>Contrôles individuels du chemin de monitorage</li>
   <li>Fonctions Mute, Att et Mono des sorties de monitorage</li>
   <li>Contrôle du niveau de monitorage</li>
-  <li>Routiage de la section de monitorage</li>
+  <li>Routage de la section de monitorage</li>
 </ol>
 
 <h2>Indicateurs de Statut</h2>
@@ -54,7 +54,7 @@
 <h2>Choix du comportement du Solo</h2>
 
 <p>
-  Les SiP, PFL et AFL sont excluant entre eux et sélectionne le mode solo. Solo Exclusif et
+  Les SiP, PFL et AFL sont excluant entre eux et sélectionnent le mode solo. Solo Exclusif et
   Solo Muet modifient ensuite le comportement du mode choisi. Voir <a href="@@muting-and-soloing">Sourdine
   et Solo</a>.  Le mode en cours est indiqué par un voyant lumineux sur le bouton.
 </p>
@@ -76,15 +76,15 @@
 <h2>Le bouton de traitement</h2>
 
 <p>
-  Cliquer le bouton de traitement affiche ou masque la fenêtre de Traitement de la section d'écoute. Cela
-  fonctionne de la même manière que pour les <a href="@@audiomidi-mixer-strips">pistes</a> et
+  Cliquer le bouton de traitement affiche ou masque la fenêtre de Traitement de la section de monitorage.
+  Cela fonctionne de la même manière que pour les <a href="@@audiomidi-mixer-strips">pistes</a> et
   les <a href="@@audiomidi-busses-mixer-strips">bus</a>. Il est utilisé pour insérer un greffon, par exemple
   un EQ pour corriger la pièce d'écoute ou bien un VU-mètre particulier.
 
 </p>
 <p>
-  Étant donné que ce traitement est spécifique à la section d'écoute, il ne s'applique qu'à l'audio routé
-  vers les sorties moniteurs
+  Étant donné que ce traitement est spécifique à la section d'écoute de contrôle, il ne s'applique qu'à
+  l'audio routé vers les sorties moniteurs
 </p>
 
 
@@ -97,67 +97,72 @@
   <tr><th>Solo Boost</th>
 	
 	<td>
-	  C'est le niveau qui sera ajouté au niveau de monitorage, lorsque le solo d'une piste ou d'un bus sera
+	  C'est le niveau qui sera ajouté au niveau de monitorage lorsque le solo d'une piste ou d'un bus sera
 	  activé, permettant de régler un niveau d'écoute optimal pour les signaux isolés. Le potentiomètre
 	  permet de régler de +0dB à +10dB et permet un réglage continu entre ces deux valeurs. Un menu
-	  déroulant avec des valeurs pré-définies est disponible.
+	  déroulant avec des valeurs pré-définies est disponible pour plus de facilité.
   </td></tr>
   <tr><th>SiP Cut</th>
 	
-	<td>Only relevant to Solo in Place mode. This sets the level that all muted tracks or busses will be
-  muted by. By default it is &minus;&infin; i.e. the non soloed tracks are totally inaudible.  The level can
-  be raised to make the other tracks audible, though dimmed. This is also sometimes referred to <em>Solo in
-  Front</em>. The rotary control has a range of &minus;&infin; to +0dB and can be set at any point between
-  these two values. A drop down menu with pre-defined values is also provided for convenience.
+	<td>Actif uniquement dans le mode Solo en Place. Fixe le niveau auquelles les pistes et bus muets seront
+	  reglés. Par défaut, ce sera &minus;&infin;. Cela siginifie que les pistes non-solo seront totalement
+	  inaudibles. Ce niveau peut être augmenté afin de rendre les pistes audibles, même si assourdies. On
+	  appelle parfois cela, <em>Solo en Face</em>. Le potentiommètre a une plage de réglage continue allant
+	  de &minus;&infin; à 0dB. Un menu déroulant avec des valeurs pré-définies est disponible pour plus de
+	  facilité.  
   </td></tr>
 </table>
 
-<h2>Dim level control</h2>
+<h2>Contrôle de niveau d'atténuation</h2>
 
 <p>
-  The Dim level control sets the amount by which the monitoring will be reduced when a Dim button is engaged.
-  The rotary control has a range of -20dB to 0dB and can be set at any point between these two values.
-  A drop down menu with pre-defined values is also provided for convenience.
+  le contrôle de niveau d'atténuation règle la quantité par laquelle le niveau de monitorage sera diminué
+  lorsque le bouton sera enclenché. Le potentiommètre a une plage de réglage continue entre -20dB et 0dB. Un
+  menu déroulant avec des valeurs pré-définies est disponible pour plus de facilité.
 </p>
 
-<h2>Monitor path controls</h2>
+<h2>Contrôle du chemin de monitorage</h2>
 
 <p>
-  Each of the individual paths through the Monitor Section, (e.g. <kbd class="menu">L</kbd> and <kbd class="menu">R</kbd>
-  for stereo), can be controlled individually. Four functions are available:
+  Chacun des chemins passant par la section d'écoute (c'est à dire <kbd class="menu">G</kbd>
+  et <kbd class="menu">D</kbd> pour la sortie stéréo), peut être contrôlé individuellement. Les quatre
+  fonctions disponibles sont:
 </p>
 <table class="dl">
-  <tr><th>Mute</th><td>Mutes the selected path(s)</td></tr>
-  <tr><th>Dim</th><td>Reduces the selected path(s) level by the amount set with the Dim level control</td></tr>
-  <tr><th>Solo</th><td>Solos the selected channel(s)</td></tr>
-  <tr><th>Inv</th><td>Inverts the selected channel(s) polarity</td></tr>
+  <tr><th>Muet</th><td>Mute le(s) chemin(s) sélectionné(s)</td></tr>
+  <tr><th>Att</th><td>Atténue le(s) chemin(s) sélectionné(s) du montant fixé par le contrôle de niveau
+  d'atténuation</td></tr>
+  <tr><th>Solo</th><td>Active le solo des canaux sélectionnés</td></tr>
+  <tr><th>Inv</th><td>Inversela polarité des canaux sélectionnés</td></tr>
 </table>
 
-<h2>Global Monitor controls</h2>
+<h2>Contrôle Globale du Monitorage</h2>
 
 <p>
-  Those buttons directly affect the output of the monitoring section:
+  Ces boutons affectent directement la sortie de la section d'écoute de contrôle:
 </p>
 <ul>
-  <li><dfn>Mono</dfn>: sums all of the paths to a single mono signal and applies it to all Monitor Section outputs.</li>
-  <li><dfn>Dim</dfn>: Reduces overall monitor level by the amount set with the Dim level control.</li>
-  <li><dfn>Mute</dfn>: Mutes all monitoring.</li>
+  <li><dfn>Mono</dfn>: Fait une sommation mono de tous les chemins et l'envoie en sortie de la section
+  d'écoute de contrôle.</li>
+  <li><dfn>Att</dfn>: Reduit le niveau global du monitorage du montant fixé par le contrôle de niveau
+  d'atténuation.</li>
+  <li><dfn>Muet</dfn>: Mute le monitorage.</li>
 </ul>
 
-<h2>Global Monitor level</h2>
+<h2>Niveau Global du Monitorage</h2>
 
 <p>
-  This control sets the level for Monitor Section output. The rotary control has a range of &minus;&infin;
-  to +6dB and can be set at any point between these two values. A drop down menu with pre-defined values
-  is also provided for convenience.
+  Ce contrôle règle le niveau de sortie de la section d'écoute de contrôle. Le potentiommètre a une plage de
+  réglage continue entre &minus;&infin; et +6dB. Un menu déroulant avec des valeurs pré-définies est
+  disponible pour plus de facilité.
 </p>
 
-<h2>Monitoring Output routing</h2>
+<h2>Routage de la Section d'Écoutede contrôle</h2>
 
 <p>
-  Clicking on this button shows a menu that allows quick and convenient routing of the Monitor Section's
-  outputs to audio hardware outputs, e.g. to feed control room monitors.
-  It also has an option to open Ardour's routing matrix, where more detailed connectivity is available if
-  routing to something other than hardware is required.
+  Cliquer ce bouton fait apparaître un menu permettant un choix rapide et facile du routage de la sortie de
+  la section d'écoute de contrôle, c'est à dire comment on alimente les moniteurs de la pièce d'écoute. Il y
+  a aussi une option permettant d'ouvrir la fenêtre de matriçage des sorties d'Ardour, où l'on a accès à une
+  connectivité plus détaillée si l'on souhaite un routage vers autre chose que le matériel.
 </p>
 
