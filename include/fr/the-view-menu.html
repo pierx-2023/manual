@@ -206,63 +206,68 @@
   <tr>
 	<th class="sub1">Zoommer
 	</th>
-	<td>Zooms in, focusing the
+	<td>Zoom avant, centré sur le
 	  <em>Zoom Focus
-	  </em> (see below)
+	  </em> (voir ci-dessous)
 	</td>
   </tr>
   <tr>
 	<th class="sub1">Dézoommer
 	</th>
-	<td>Zooms out
+	<td>Zoom arrière
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Zoom to Session
+	<th class="sub1">Zoom sur la Session
 	</th>
-	<td>Adjust the zoom value so that all the session (as defined by its start and end markers) fit in the window
+	<td>Ajuster le zoom de manière à voir toute la session (définie par ses repère de Début et de Fin) dans
+	  la fenêtre
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Zoom to Extents
+	<th class="sub1">Zoom jusqu'aux limites
 	</th>
-	<td>Adjust the zoom value so that all objects (markers, regions, etc&hellip;) fit in the window
+	<td>Ajuste le zoom de manière à voir tous les objets (repères, régions, etc&hellip;) dans la fenêtre
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Zoom to Selection
+	<th class="sub1">Zoom sur la Sélection
 	</th>
-	<td>Adjust the zoom value so that all the selected regions fit in the window
+	<td>Ajuste le zoom de manière à voir toutes les régions sélectionnées dans la fenêtre
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Zoom to Selection (Horizontal)
+	<th class="sub1">Zoom sur la Sélection (Horizontal)
 	</th>
-	<td>Adjust the horizontal zoom value so that all the selected regions fit in the window, without changing the vertical zoom
+	<td>Ajuste le zoom horizontal de manière à rendre visible toutes les régions sélectionnées, sans
+	  modifier la taille vertical du zoom
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Fit Selection (Vertical)
+	<th class="sub1">S'ajuster à la sélection (Vertical)
 	</th>
-	<td>Fits the selected track(s) in the window. If too many tracks are selected, they'll be reduced to their minimum height.
+	<td>Ajuste la vue aux pistes sélectionnées. Si trop de pistes sont sélectionnées, elles seront réduites
+	  à leur hauteur minimale.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Toggle Zoom State
+	<th class="sub1">Zoom précédent
 	</th>
-	<td>Reverts to last zoom state (kind of "undo" for zoom, even if edits have been made in-between)
+	<td>Revient à la taille et position de zoom précédente (en quelque sorte, une "Annulation" du zoom, même
+	  si des montages ont été réalisés entre-temps). 
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Expand Track Height
+	<th class="sub1">Augmente la taille des pistes
 	</th>
-	<td>Increases the height of the selected tracks. If no track is selected, then all the tracks are expanded
+	<td>Augmente la taille des pistes sélectionnées. Si aucune piste n'est sélectionnée, la taille de toutes
+	sera augmentée.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Shrink Track Height
+	<th class="sub1">Réduire la taille des pistes
 	</th>
-	<td>Same as above, but reduces the height of the tracks
+	<td>Idem, mais réduit la taille des pistes.
 	</td>
   </tr>
   <tr>
@@ -270,215 +275,225 @@
 	</th>
   </tr>
   <tr>
-	<th class="sub1">&cir; Zoom Focus Left
+	<th class="sub1">&cir; Zoom Focus à gauche
 	</th>
-	<td>Sets the screen's left side as the zoom target, i.e. when zooming in, the left side of the screen will stay at the same place in the timeline
+	<td>Défini le côté gauche de l'écran comme point de focalisation du zomm, c'est à dire que lorsque l'on
+	  zoom, la partie gauche de l'écran restera à la même place dans la ligne temporelle.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&cir; Zoom Focus Right
+	<th class="sub1">&cir; Zoom Focus à droite
 	</th>
-	<td>Same, with the right of the screen
+	<td>Idem avec la partie droite de l'écran.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&cir; Zoom Focus Center
+	<th class="sub1">&cir; Zoom Focus au centre
 	</th>
-	<td>Same, with the center of the screen
+	<td>Idem avec le centre de l'écran.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&cir; Zoom Focus Playhead
+	<th class="sub1">&cir; Zoom Focus sur le lecteur
 	</th>
-	<td>Sets the playhead as the focus point of the zoom, i.e. the point in time that will stay fixed
+	<td>Définile lecteur comme point de focalisation du zoom, c'est à dire que le lecteur restera fixe dans
+	la ligne temporelle.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&cir; Zoom Focus Mouse
+	<th class="sub1">&cir; Zoom Focus sur la souris
 	</th>
-	<td>Same as above, with the mouse pointer
+	<td>Idem que ci-dessus mais avec la souris comme repère
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&cir; Zoom Focus Edit Point
+	<th class="sub1">&cir; Zoom Focus sur le point de montage
 	</th>
-	<td>Same as above, with the Edit Point
+	<td>Idem que ci-dessus mais avec le point de montage comme repère.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Next Zoom Focus
+	<th class="sub1">Zoom Focus suivant
 	</th>
-	<td>Circles between the previous modes
+	<td>Alterne entre tous les modes précédent.
 	</td>
   </tr>
   <tr>
-	<th colspan="2">Scroll
+	<th colspan="2">Défilement
 	</th>
   </tr>
   <tr>
-	<th class="sub1">Scroll Tracks Down
+	<th class="sub1">Défiler les pistes vers le haut
 	</th>
-	<td>Scrolls the view toward the bottom of the session from one screen (vertically, so along tracks)
+	<td>Fait défiler la vue vers le bas de la session de la valeur d'un écran (verticalement, donc suivant
+	  les pistes).
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Scroll Tracks Up
+	<th class="sub1">Défiler les pistes vers le bas
 	</th>
-	<td>Same as above, towards the top
+	<td>Idem, vers le haut.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Scroll Forward
+	<th class="sub1">Défiler en avant
 	</th>
-	<td>Scrolls the view toward the right of the session from one screen (horizontally, so along time)
+	<td>Fait défiler la vue vers la droite de la session de la valeur d'un écran (horizontalement, suivant
+	la ligne temporelle).
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Scroll Backward
+	<th class="sub1">Défiler en arrière
 	</th>
-	<td>Same as above, to the left
+	<td>Idem, mais vers la gauche.
 	</td>
   </tr>
 		
   <tr>
-	<th colspan="2">Video Monitor
+	<th colspan="2">Moniteur Vidéo
 	</th>
   </tr>
   <tr>
-	<th class="sub1">Original Size
+	<th class="sub1">Taille Originale
 	</th>
-	<td>When the
-	  <a href="@@video-timeline-and-monitoring">Video Monitor
-	  </a> is active, resets its size to the original size, i.e. 1 pixel in the video is 1 pixel on screen
+	<td>Quand le
+	  <a href="@@video-timeline-and-monitoring">Moniteur Vidéo
+	  </a> est activé, réinitialise sa taille à la taille originale, c'est à dire un pixel de la vidéo est
+	  égal à un pixel d'écran. 
 	</td>
   </tr>
   <tr>
 	<th class="sub1">&square; Letterbox
 	</th>
-	<td>When checked, forces the ratio (width/height) to be the one of the original video. If unchecked, the video will be stretched to fit the window
+	<td>Si coché, force le rapport largeur/hauteur à celui de la viédo d'origine. Si décoché, la vidéo sera
+	  étirée pour remplir la fenêtre.
 	</td>
   </tr>
 
   <tr>
-	<th class="sub1">&square; Always on Top
+	<th class="sub1">&square; Toujours au dessus
 	</th>
-	<td>Stays above all other windows, enabling to work in Ardour without the video windows to be hidden in the background
+	<td>Reste toujours au-dessus des autres fenêtres, ce qui permet de travailler dans Ardour sans que la
+	  fenêtre vidéo soit cachée à l'arrière-plan.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&square; Fullscreen
+	<th class="sub1">&square; Plein Écran
 	</th>
-	<td>Sets the Xjadeo window to be fullscreen. Can be useful in a dual monitor setup
+	<td>Passe la fenêtre XJadeo en plein-écran. Utile dans une configuration à deux moniteurs.
 	</td>
   </tr>
 
   <tr>
-	<th class="sub1">&square; Timecode
+	<th class="sub1">&square; Code Temporel
 	</th>
-	<td>When checked, displays a Timecode over the video, in the Hours:Minutes:Seconds:Frames format
+	<td>Si coché, affiche le code temporelle sur la vidéo, au format Heures:Minutes:Secondes:Images.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&square; Frame number
+	<th class="sub1">&square; Numéro d'Image
 	</th>
-	<td>When checked, shows the absolute frame number inside the video, i.e. this image is the
-	  <em>n
-	  </em>th of the video
+	<td>Si coché, affiche le numéro d'image absolu dans la vidéo, c'est à dire, cette image est
+	  la <em>n-ième</em> image de la vidéo.
 	</td>
   </tr>
   <tr>
-	<th class="sub1">&square; Timecode Background
+	<th class="sub1">&square; Arrière-plan du Code Temporel
 	</th>
-	<td>Adds a black background to the timecode for readability
+	<td>Ajoute un fond au code temporel pour la lisibilité
 	</td>
   </tr>
 	
   <tr>
-	<th colspan="2">Editor Views
+	<th colspan="2">Vues de Montage
 	</th>
   </tr>
   <tr>
-	<th class="sub1">Save View
+	<th class="sub1">Sauvegarder la Vue
 	  <em>n
 	  </em>
 	</th>
-	<td>Saves the position on the timeline in the memory, horizontally and vertically (along time and tracks)
+	<td>Enregistre en mémoire la position de la vue temporelle, horizontalement et verticalement (suivant
+	  les pistes et le temps).
 	</td>
   </tr>
   <tr>
-	<th class="sub1">Go to View
+	<th class="sub1">Aller à la Vue
 	  <em>n
 	  </em>
 	</th>
-	<td>Loads and displays a saved position (see above)
+	<td>Recharge et affiche une position sauvegardée (voir ci-dessus)
 	</td>
   </tr>
 
   <tr>
-	<th>&square; Show Editor Mixer
+	<th>&square; Afficher la tranche de mixage
 	</th>
-	<td>When checked, the selected tracks' mixer strip is displayed on the left of the editor window, allowing for a quick access to e.g. effects and routing
+	<td>Si coché, affiche la tranche de mixage à gauche de la fenêtre de montage, ce qui permet d'y avoir
+	  accès facile pour, par exemple, les effets et le routage
 	</td>
   </tr>
   <tr>
-	<th>&square; Show Editor List
+	<th>&square; Afficher les listes d'édition
 	</th>
-	<td>In the Editor window, shows the
-	  <a href="@@editor-lists">Editor List
-	  </a>, giving access to a number of handy lists (regions, tracks, &hellip;)
+	<td>Dans la fenêtre de montage, affiche les
+	  <a href="@@editor-lists">listes d'édition
+	  </a>, ce qui donne accès à de nombreuses listes utiles (regions, pistes, &hellip;)
 	</td>
   </tr>
   <tr>
-	<th>&square; Show Summary
+	<th>&square; Afficher un aperçu
 	</th>
-	<td>If checked, in the Editor, shows the
-	  <a href="@@summary">Summary
-	  </a>, allowing a faster navigation in the session
+	<td>Si coché, affiche un
+	  <a href="@@summary">aperçu
+	  </a> en bas de la fenêtre de montage, pour une navigation plus rapide dans la session
 	</td>
   </tr>
   <tr>
-	<th>&square; Show Group Tabs
+	<th>&square; Affiche l'onglet des Groupes
 	</th>
-	<td>If checked, makes the groups visible as tabs on the left in the Editor, and on the top in the mixer
+	<td>Si coché, rend les groupes visible à l'aide d'onglet à gauche dans la fenêtre de montage et en haut
+	  de la fenêtre de mixage
 	</td>
   </tr>
   <tr>
-	<th>&square; Show Marker Lines
+	<th>&square; Afficher les lignes de Repères
 	</th>
-	<td>If checked, each marker is extended across all the tracks in the editor with a line of the same color
+	<td>Si coché, dans l'éditeur, chaque repère est étendu à travers toutes les pistes à l'aide d'une ligne de la même
+	  couleur que le repère
 	</td>
   </tr>
 	
   <tr>
-	<th>&square; Mixer: Show Mixer List
+	<th>&square; Console: afficher les listes
 	</th>
-	<td>In the Mixer view, shows the Mixer list, giving access to some handy lists (
-	  <a href="@@favorite-plugins-window">Favorite plugins
+	<td>Dans la fenêtre de mixage, affiche les listes de mixage, qui donne accès à des listes pratiques (
+	  <a href="@@favorite-plugins-window">Greffons favoris
 	  </a>,
-	  <a href="@@strips-list">The Strip list
+	  <a href="@@strips-list">Liste des Tranches
 	  </a>,&hellip;)
 	</td>
   </tr>
   <tr>
-	<th>&square; Mixer: Show VCAs
+	<th>&square; Console: Afficher les VCA
 	</th>
-	<td>In the Mixer view, shows the VCA Strips if there are any
+	<td>Dans la vue Console, affiche les tranches VCA, s'il y en a
 	</td>
   </tr>
   <tr>
-	<th>&square; Mixer: Show Monitor Section
+	<th>&square; Console: Afficher la section d'écoute
 	</th>
-	<td>If the
-	  <kbd class="option">Use monitoring section on this session
-	  </kbd> has been checked in the
-	  <a href="@@session-properties#properties-monitoring">Session Properties window
-	  </a>, shows or hides the Monitor Section in the Mixer
+	<td>Si
+	  <kbd class="option">Utiliser la section d'écoute pour cette session
+	  </kbd> a été coché dans la
+	  <a href="@@session-properties#properties-monitoring">Fenêtre de propriétés de la Session
+	  </a>, affiche ou cache la section d'écoute dans la console
 	</td>
   </tr>
   <tr>
-	<th>&square; Mixer: Show Foldback Strip
+	<th>&square; Console: Afficher les Bus de Retour
 	</th>
-	<td>In the Mixer view, shows the Foldback Strip if there are any
+	<td>En vue Console, affiche les tranches des bus de retour s'il y en a
 	</td>
   </tr>
 </table>
