@@ -10,7 +10,7 @@
 	
 	<td>Place la région sélectionnée dans la liste des Sources sur le point de
 	  montage</td></tr>
-	<tr><th>Jouer les régions sélectionnées</th>
+	<tr><th>Lire les régions sélectionnées</th>
 	  
 	  <td>Démarre l'écoute au début de la région la plus précoce et l'arrête à la
 		fin de la plus tardive</td></tr>
@@ -29,9 +29,9 @@
 		de la région</td></tr>
 	<tr><th>Propriétés&hellip;</th>
 	  
-	  <td>Affiche la fenêtre de <kbd class="menu">Propriétés de la Région</kbd>
+	  <td>Ouvre la fenêtre de <kbd class="menu">Propriétés de la Région</kbd>
 		qui affiche de manière détaillée des informations sur la région et permet
-		certaines modifications</td></tr>
+		la modification de certaines</td></tr>
 	<tr><th>Analyse de sonie&hellip;</th>
 	  
 	  <td>Ouvre la fenêtre <kbd class="menu">Rapport/Analyse audio</kbd> , qui
@@ -44,19 +44,44 @@
 	  affiche le spectre d'amplitude de la région (niveau dBFS en fonction de la
 	  fréquence)</td></tr>
 	<tr><th colspan="2">Montage</th></tr>
-  <tr><th class="sub1">Combiner</th>
+  <tr><th class="sub1">Composer</th>
 	
-	<td>Crée une nouvelle région en réunissant les régions audio
-	  sélectionnées sur une même piste et les remplace par celle-ci. La création
-	  se fait en respectant les mêmes règles que pour la lecture, par exemple en
-	  ce qui concerne la superposition des régions.</td></tr>
+	<td>Crée une nouvelle région en réunissant les régions audio sélectionnées
+	  sur une même piste et les remplace par celle-ci. La création se fait en
+	  respectant les mêmes règles que pour la lecture, par exemple en ce qui
+	  concerne la superposition des régions.</td></tr>
 
-		<tr><th class="sub1">Uncombine</th><td>Splits back the compound created by <em>combining</em> into its original audio regions</td></tr>
-		<tr><th class="sub1">Pitch Shift&hellip;</th><td>Changes the tune of the audio region, by octave, semitones or percentage, based on spectral analysis. Optionally, and if they have been set for the region, preserves the formants</td></tr>
-		<tr><th class="sub1">Split at Percussion Onset</th><td>Allows splitting the selected regions on its Percussion Onsets marker as set by the Rhythm Ferret (Not usable as of 5.5)</td></tr>
-		<tr><th class="sub1">Make Mono Regions</th><td>Creates mono regions out of a stereo or multichannel region by splitting it into its discrete channels. The created regions are added to the Editor List</td></tr>
-		<tr><th class="sub1">Close Gaps</th><td>Extends (or reduces) the selected regions to be perfectly aligned. Optionally, sets up a crossfade duration, or a pull-back (spacing between regions)</td></tr>
-		<tr><th class="sub1">Place Transient</th><td>Places a transient at the Edit Point. Used e.g. for the <kbd class="menu">Pitch Shift&hellip;</kbd> action</td></tr>
+  <tr><th class="sub1">Décomposer</th>
+	
+	<td>Scinde la région créée avec <em>Composer</em> pour faire réapparaitre
+	  les régions audio d'origine</td></tr>
+  <tr><th class="sub1">Décalage de tonalité&hellip;</th>
+	
+	<td>Modifie la hauteur d'une région audio, par octave, demi-tons, pourcentage,
+	  d'après son analyse spectrale. Il est possible si cela a été activé pour la
+	  région, de préserver les formants</td></tr>
+  <tr><th class="sub1">Scinder à la percussion</th>
+	
+	<td>Permet de scinder les régions sélectionnées selon leurs marqueurs de
+	  percussion, définis par le Limier de Rythme (non utilisable avant la
+	  version 5.5).</td></tr>
+  <tr><th class="sub1">Créer des régioons mono</th>
+	
+	<td>Crée des régions mono à partir de régions stéréos ou multicanaux en créant
+	  des canaux séparés. Les régions nouvellement créées apparaissent dans la
+	  Liste des Régions.</td></tr>
+  <tr><th class="sub1">Combler les Ecarts&hellip;</th>
+	
+	<td>Étend ou raccourci la plus précoce des régions sélectionnées afin de
+	  d'aligner sa fin sur le début de la suivante. Il est possible de créer
+	  un temps de fondu ou de retrait (espace entre les régions). Si les
+	  régions sont sur deux pistes, il faut que la région qui est sur la piste
+	  du dessus soit la plus précoce. Sa fin viendra s'aligner sur le debut de
+	  l'autre région (la région est raccourcie).</td></tr>
+  <tr><th class="sub1">Placer une Transitoire</th>
+	
+	<td>Placer une transitoire au point de montage. Utile par exemple pour les
+	  <kbd class="menu">Décalage de tonalité&hellip;</kbd></td></tr>
 		<tr><th class="sub1">Rhythm Ferret&hellip;</th><td>Opens the <kbd class="menu">Rhythm Ferret</kbd> which is a powerful tool to sequence audio files</td></tr>
 		<tr><th class="sub1">Strip Silence&hellip;</th><td>Opens the <kbd class="menu">Strip Silence</kbd> window which is a very handy tool to remove all audio under a user-chosen threshold (with a preview)</td></tr>
 		<tr><th class="sub1">Reverse</th><td>Mirrors the audio horizontally</td></tr>
