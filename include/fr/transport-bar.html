@@ -1,0 +1,231 @@
+<h2>Les contrôles du Transport
+</h2>
+
+<p>
+  La 
+  <dfn>Barre de Transport
+  </dfn> regroupe les actions de contrôle de la lecture et de l'enregitrement.
+</p>
+
+<figure>
+  <img width="50%" src="/images/transport.png" alt="Les contrôles du transport">
+  <figcaption>
+    Les contrôles du transport
+  </figcaption>
+</figure>
+
+<h3 id="transport_action_buttons">Boutons d'action sur le transport
+</h3>
+<p>
+  la rangée du haut contient les actions, toutes avec un raccourcis clavier pour un flux de travail plus
+  efficace: 
+</p>
+
+<table class="dl">
+  <tr>
+	<th>Panic MIDI
+	</th>
+	<td>Arrête immédiatement tout envoi MIDI.
+	</td>
+  </tr>
+  <tr>
+	<th(Dés)active le métronome
+	</th>
+	<td>Un clic-droit affiche le menu
+      <kbd class="menu">Métronome
+	  </kbd> dans les Préférences. La molette permet d'ajuster le niveau du métronome.
+	</td>
+  </tr>
+  <tr>
+	<th>Aller au début de la session
+	</th>
+	<td>Place le Lecteur au début de la session, défini par le
+	  <a href="@@working-with-markers">Marqueur Début
+	  </a>.
+	</td>
+  </tr>
+  <tr>
+	<th>Aller à la fin de la session
+	</th>
+	<td>Place le Lecteur à la fin de la session, définie par le 
+	  <a href="@@working-with-markers">Marqueur Fin
+	  </a>.
+	</td>
+  </tr>
+  <tr>
+	<th>Lire boucle
+	</th>
+	<td>Répète la 
+	  <a href="@@controlling-playback">Boucle
+	  </a>
+      définie par les
+	  <a href="@@the-loop-range">Repères de Boucle
+	  </a>, jusqu'à l'appui du bouton "Arrêt lecture". Cliquer "Lire Boucle" alors que qu'elle
+     est active, la désactive et continue la lecture normalement à partir de la position actuelle du
+     lecteur.  
+	</td>
+  </tr>
+  <tr>
+	<th>Lire sélection/intervalle
+	</th>
+	<td> Si un intervalle a été défini à l'aide du bouton <dfn>Mode Intervalle</dfn> ou
+	  si une région (audio ou MIDI) a été sélectionnée, lit cet intervalle ou cette région. Dans tous les
+	  cas,  la lecture s'arrête à la fin de l'intervalle ou de la région.
+	</td>
+  </tr>
+  <tr>
+	<th>Lire depuis le Lecteur
+	</th>
+	<td>Démarre la lecture et éventuellement l'enregistrement (plus d'info ci-dessous).
+	</td>
+  </tr>
+  <tr>
+	<th>Stop
+	</th>
+	<td>Quelque soit le mode (Boucle, intervalle, &hellip;) arrête la lecture. Selon d'autres réglages des
+    effets (du genre Chorus, réverbération) seront toujours percptibles un certain temps.
+	</td>
+  </tr>
+  <tr>
+	<th>Armer l'enregistrement
+	</th>
+	<td>(Dés)Arme l'enregistrement globalement. Tant qu'il est armé, le bouton clignote en rouge. Ce
+    bouton ne démarre pas l'enregitrement: si des pistes sont armées (en enregistrement), un clic sur
+    "Lire depuis le lecteur" démarre effectivement l'enregitrement sur ces pistes.
+	</td>
+  </tr>
+</table>
+
+<p class="note">
+  Si Ardour est synchronisé avec d'autres appareils, il est possible que certaines fonctions soient
+  indisponibles. Selon le protocole utilisé, Ardour ne répondra qu'à l'appareil <dfn>Maître</dfn>.
+</p>
+
+<h3 id="transport_modifiers">Les modificateurs de Transport
+</h3>
+<h4 id="transport_shuttle">Le variateur de vitesse
+</h4>
+<p>
+  Sous ces boutons, on trouve le 
+  <dfn>variateur de vitesse
+  </dfn> qui permet 
+  <em>temporairement
+  </em> de lire à vitesse variable. Le curseur contrôle la vitesse de lecture: plus il s'éloigne du centre et
+  plus la lecture s'accélère dans l'une ou l'autre des directions. La plage d'accélération est définie par
+  un clic-<kbd class=mouse>droit</kbd> qui règle un multiplicateur à 1,5 (&plusmn; 150%), ou à 2 (&plusmn;
+  200%). 
+</p>
+
+<h4 id="transport_varispeed">VariSpeed
+</h4>
+<p>
+  Le bouton
+  <kbd class="menu">VS
+  </kbd> (pour
+  <em>V
+  </em>ari
+  <em>S
+  </em>peed)
+  définie une vitesse de lecture/enregitrement
+  <em>fixe
+  </em>. Il peut être réglé en demi-ton (1 demi-ton = &times; 2
+  <sup>1&frasl;12
+  </sup> &asymp;
+  105,9%), centième de demi-tons, ou pourcentage, et est (dés)armé en cliquant dessus. Le bouton
+  <kbd class="menu">VS
+  </kbd> clignote quand le Varispeed est actif. Dans les
+  <a href="@@preferences#preferences-transport">Préférences
+  </a>,
+  <kbd class="option">Réinitialiser la vitesse la vitesse de lecture lors de l'arrêt
+  </kbd>
+  on peut définir si ce réglage est permanent ou non, c'est-à-dire s'il se réinitialise lorsque l'on
+  arrête la lecture.
+</p>
+
+<h4 id="transport_sync">Synchronisation du Transport
+</h4>
+<p>
+  À gauche du curseur, on trouve le bouton de Synchro (qui affiche
+  <dfn>Internal
+  </dfn>,
+  <dfn>MTC
+  </dfn> ou autre chose) qui sera utilisé pour choisir si c'est Ardour qui contrôle le transport ou bien si
+  c'est une source extérieure telle que du MTC (MIDI Time Code), du LTC (Longitudinal Time Code) ou bien
+  JACK (voir
+  <a href="@@timecode-generators-and-slaves">Générateur de Code Temporel et Esclaves</a>).
+</p>
+
+<h4 id="transport_status">Statut du Transport
+</h4>
+<p>
+  Le statut de lecture actuel (Stop, Lecture, % de Vitesse) est affiché à droite du curseur du vitesse.
+</p>
+
+
+<h2>Utiliser les raccourcis clavier
+</h2>
+<p>
+  Ardour possède de nombreuse commande pour contrôler le transport, auquelles on peut associer un raccourci
+  clavier. Pour nombre d'entre-elle, un raccourci est déjà défini. Ci-dessous, on trouve la liste de
+  certaines commandes et le raccourci associé:
+</p>
+
+<table class="dl">
+  <tr>
+	<th>
+	  <kbd>Espace
+	  </kbd>
+	</th>
+	<td>Démarre/arrête la lecture.
+	</td>
+  </tr>
+  <tr>
+	<th>
+	  <kbd>&nwarr;
+	  </kbd>
+	</th>
+	<td>Déplace le lecteur sur le marqueur de début de session.
+	</td>
+  </tr>
+  <tr>
+	<th>
+	  <kbd>&searr;
+	  </kbd>
+	</th>
+	<td>Déplace le lecteur sur le marqueur de fin de session.
+	</td>
+  </tr>
+  <tr>
+	<th>
+	  <kbd>&rarr;
+	  </kbd>
+	</th>
+	<td>Lecteur sur la limite de région suivante.
+	</td>
+  </tr>
+  <tr>
+	<th>
+	  <kbd>&larr;
+	  </kbd>
+	</th>
+	<td>Lecteur sur la limite de région précédente.
+	</td>
+  </tr>
+  <tr>
+	<th>
+	  <kbd>0
+	  </kbd>
+	</th>
+	<td>Lecteur au début de la ligne temporelle.
+	</td>
+  </tr>
+</table>
+
+<p>
+  Les menus
+  <kbd class="menu">Transport
+  </kbd> et
+  <kbd class="menu">Transport &gt; Lecteur
+  </kbd> contiennent d'autres actions (avec leurs raccourcis).
+</p>
+
