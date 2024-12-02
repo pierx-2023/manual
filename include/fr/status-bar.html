@@ -8,28 +8,34 @@
 
 <p>
   La barre de statut est une barre d'information en haut de la fenêtre. Un clic-droit n'importe où dans la
-	barre permet de choisir les informations affichées, via une liste à cocher:
-<table class="dl">
-	<tr><th>Chemin de la session:</th><td> Le dossier où se trouvent les fichiers de la session</td></tr>
-	<tr><th>Nom du cliché et indicateur de modification:</th><td> Le nom du cliché sur lequel on travaille. Si
+  barre permet de configurer les informations affichées, via une liste à cocher:
+  <table class="dl">
+	<tr>
+	  <th>Chemin de la session:
+	  </th>
+	  <td> Le dossier où se trouvent les fichiers de la session
+	  </td>
+	</tr>
+	<tr>
+	  <th>Nom du cliché et indicateur modifié:
+	  </th>
+	  <td> Le nom du cliché sur lequel on travaille. Si
 		la session a été modifiée depuis la dernière sauvegarde, les noim sera préfixé d'u
 		astérisque(&ast;).
 	  </td>
 	</tr>
 	<tr>
-	  <th>Travail sur fichier-crête actif:
+	  <th>Travail de fichier-crête actif:
 	  </th>
 	  <td>
-		<em> (s'affiche seulement lors de la création du
-		  fichier-crête)
+		<em> (s'affiche seulement lors de la création du fichier-crête)
 		</em> Affiche le nombre de fichier-crête restant à créer
 	  </td>
 	</tr>
 	<tr>
 	  <th>Format de fichier:
 	  </th>
-	  <td> Le format de fichier utilisé pour la session, ce qui inclut les
-		enregitrements.
+	  <td> Le format de fichier utilisé pour la session, enregitrements inclus.
 	  </td>
 	</tr>
 	<tr>
@@ -42,57 +48,94 @@
 	<tr>
 	  <th>Audio:
 	  </th>
-	  <td> Affiche la fréquence d'échantillonnage utilisé pour cette session, et la latence
-		calculée pour la taille du tampon
+	  <td> Affiche la fréquence d'échantillonnage utilisé pour cette session et la latence
+		calculée en fonction de la taille du tampon
 	  </td>
 	</tr>
 	<tr>
-	  <th>Stockage:</th><td> Affiche l'espace de stockage libre comme temps d'enregistrement disponible
-	  selon les paramètres actuels de la session</td></tr>
-	<tr><th>DSP:</th><td> pour "<em>D</em>igital <em>S</em>ound <em>P</em>rocessing", affiche la charge du
-		système utilisé par Ardour et pour le traitement en temps-réel. Cette valeur en pourcentage,
-		correspond au rapport entre <em>temps de traitement effectif</em> et <em>temps de traitement
-		  disponible</em>.</td></tr>
-	<tr><th>Horloge système:</th><td> Affiche l'horloge système (utile dans le mode plein-écran)</td></tr>	
-	<tr><th>Voyant journal:</th><td> Indique si Ardour a rencontré un problème ou une erreur.</td></tr>
-</table>
+	  <th>Stockage:
+	  </th>
+	  <td> Affiche l'espace de stockage libre sous la forme de temps d'enregistrement disponible,
+		selon les paramètres actuels de la session (fréquence d'échantillonage, résolution)
+	  </td>
+	</tr>
+	<tr>
+	  <th>DSP:
+	  </th>
+	  <td> pour "
+		<em>D
+		</em>igital
+		<em>S
+		</em>ound
+		<em>P
+		</em>rocessing", affiche la charge du système utilisé par Ardour et pour le traitement en
+		temps-réel. Cette valeur en pourcentage, correspond au rapport entre
+		<em>temps de traitement effectif
+		</em> et
+		<em>temps de traitement disponible
+		</em>.
+	  </td>
+	</tr>
+	<tr>
+	  <th>Horloge système:
+	  </th>
+	  <td> Affiche l'horloge système (utile dans le mode plein-écran)
+	  </td>
+	</tr>	
+  </table>
 
 <p>
   Certains de ces indicateurs permettent, grâce à un double-clic dans le champ d'info, d'accéder à des
-  actions précises:
+  actions pré-définies:
 </p>
 
 <table class="dl">
-	<tr><th>Chemin de la session / Nom du cliché et indicateur de modification</th>
-	  <td>
-		Ouvre le dossier de session dans le gestionnaire de fichier du système
-		</td>
-	</tr>
-	<tr>
-		<th>Format de fichier:</th>
-		<td>
-		  Ouvre la section <em>Media</em> des <a href="@@session-properties#properties-media">Propriétés de
-		  la Session</a>
-		</td>
-	</tr>
-	<tr>
-		<th>Format du code temporel:</th>
-		<td>
-		  Ouvre la section <em>Code Temporel</em>
-		  des <a href="@@session-properties#properties-media">Propriétés de la Session</a>
-		</td>
-	</tr>
-	<tr>
-		<th>Audio:</th>
-		<td>
-			Ouvre la fenêtre <a href="@@audio-midi-setup">Réglages Audio et MIDI Setup</a>.
-		</td>
-	</tr>
-	<tr>
-		<th>Voyant Journal</th>
-		<td>
-		  Le voyant du Journal passe en jaune en cas d'avertissement, et en rouge en cas d'erreur. En
-			cliquant le bouton, on affiche le Journal
-		</td>
-	</tr>
+  <tr>
+	<th>Chemin de la session / Nom du cliché et indicateur de modification
+	</th>
+	<td>
+	  Ouvre le dossier de session dans le gestionnaire de fichier du système
+	</td>
+  </tr>
+  <tr>
+	<th>Format de fichier:
+	</th>
+	<td>
+	  Ouvre la section
+	  <em>Media
+	  </em> des
+	  <a href="@@session-properties#properties-media">Propriétés de
+		la Session
+	  </a>
+	</td>
+  </tr>
+  <tr>
+	<th>Format du code temporel:
+	</th>
+	<td>
+	  Ouvre la section
+	  <em>Code Temporel
+	  </em>
+	  des
+	  <a href="@@session-properties#properties-media">Propriétés de la Session
+	  </a>
+	</td>
+  </tr>
+  <tr>
+	<th>Audio:
+	</th>
+	<td>
+	  Ouvre la fenêtre
+	  <a href="@@audio-midi-setup">Réglages Audio et MIDI Setup
+	  </a>.
+	</td>
+  </tr>
+  <tr>
+	<th>Voyant Journal
+	</th>
+	<td>
+	  Le voyant du Journal passe en jaune en cas d'avertissement, et en rouge en cas d'erreur. En
+	  cliquant le bouton, on affiche le Journal
+	</td>
+  </tr>
 </table>
