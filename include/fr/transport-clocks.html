@@ -1,0 +1,107 @@
+
+<figure>
+  <img src="/images/new_main_clocks.png" alt="Les horloges de transport dans Ardour">
+  <figcaption>
+	Les horloges de transport dans Ardour
+  </figcaption>
+</figure>
+
+<p>
+  Les <dfn>horloges</dfn> dans Ardour, sont utilisées pour afficher précisément le temps. Dans de nombreuses
+  situations, c'est une des manière de changer la vakeur du temps.
+</p>
+<p>
+  Dans la barre de transport de la fneêtre de montage, par défaut il y a deux horloges qui affichent la
+  position du lecteur et d'autres informations concernant le transport et la ligne temporelle. On les
+  appelle les <dfn>horloges de transport</dfn>; celle de gauche est l'<dfn>horloge primaire de
+  transport</dfn> (elle affiche toujours la position du lecteur) et celle de droite est l'<dfn>horloge
+  secondaire du transoprt</dfn>.
+</p>
+<p>
+  Le fait d'avoir deux horloges permet de connaitre la position du lecteur selon deux unités de temps
+  différentes sans avoir à changer de réglages. Par exemple, on peut afficher le temps à la fois en Code
+  Temporel et Mesures/Temps. Si l'on souhaite, il est possible de cacher l'horloge secondaire grâce aux <a 
+  href="@@preferences#preferences-appearance-toolbar">Préférences</a>, dans <kbd class="menu">Apparence &gt;
+  Barre d'outils &gt; Afficher l'orloge secondaire</kbd>.
+</p>
+<p>
+  Dans Ardour, on peut modifier toutes les horloges de la même manière. Allez
+  voir <a href="@@editing-clocks">Editing Clocks</a> pour savoir comment. Lorsque vous modifiez le temps
+  dans l'horloge de transport, le lecteur va se re-positionner de la même manière qu'avec d'autres
+  opérations. 
+</p>
+
+<p>
+  Les horloges de transport ont des attributs spéciaux liés à leur fonction:
+</p>
+
+<h2>Panneau d'Information</h2>
+<p>
+  Sous chaque horloge, il y a un panneau d'information qui le <a href="@@editing-clocks#clock-modes">mode
+	d'horloge</a> actuel: 
+<table class="dl">
+	<thead>
+		<tr>
+			<th>Mode</th>
+			<th>Information</th>
+		</tr>
+	</thead>
+	<tbody>
+	  <tr>
+		  <th>Code Temporel / Minutes:Secondes / Secondes</th>
+		  <td>Source du Code Temporel (<samp>INT</samp> siginifie qu'Ardour génère son propre code temporel)</td>
+	  </tr>
+	  <tr>
+		  <th>Mesures:Temps</th>
+		  <td>Tempo et Métrique actuels. Cliquer un de ces boutons permet de changer les valeurs.</td>
+	  </tr> 
+	  <tr>
+		  <th>Échantillons</th>
+		  <td>Fréquence d'échantillonnage (<samp>SR</samp> pour Sample Rate) et décalage son/image', tels
+		  que définis dans les <a href="@@session-properties#properties-timecode">Propriétés de session</a>.
+		  </td>
+	  </tr>
+  </tbody>
+</table>
+
+<h2>Origine du Temps</h2>
+<p>
+  Avec le menu contextuel du clic-<kbd class="mouse">Droit</kbd>, il est possible de choisir une nouvelle
+	origine du temps, le point "zéro", parmis les suivants:
+</p>
+
+<table class="dl">
+  <tr>
+	  <th><dfn>Afficher le temps absolu</dfn></th>
+	  <td>Le point "zéro" sera le début de la ligne temporelle (quelque-soit le début de la session et les
+	  décalages de Code Temporel).</td>
+  </tr>
+  <tr>
+	  <th><dfn>Afficher le delta avec le curseur</dfn></th>
+	  <td>Le point "zéro" est le point d'édition choisi avec le <a href="@@edit-point-control">Sélecteur
+	  d'édition</a>,  par exemple le marqueur sélectionné.</td>
+  </tr> 
+  <tr>
+	  <th><dfn>Affiche le delta avec le repère de l'origine</dfn></th>
+	  <td>Le point "zéro" sera le repère <em>début</em> de la session.</td>
+  </tr>
+</table>
+
+<ul>
+  <li>
+	L'horloge pourra afficher une valeur négative ou positive selon les positions temporelles respectives du
+	  point zéro choisi et du lecteur.
+  </li>
+  <li>
+	Les horloges auront une couleur différente selon qu'elles affichent le mode <em>delta à l'édition</em>
+	ou <em>delta à l'origine</em> afin d'éviter toute confusion. 
+  </li>
+  <li>
+	Lorsque l'horloge est dans l'un de ces deux modes, on ne peut pas changer sa valeur.
+  </li>
+</p>
+
+
+
+
+
