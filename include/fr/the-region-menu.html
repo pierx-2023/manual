@@ -163,52 +163,52 @@
   <tr>
     <th class="sub1">Rhythm Ferret&hellip;
     </th>
-    <td>Opens the
+    <td>Ouvre le
       <kbd class="menu">Rhythm Ferret
-      </kbd> which is a powerful tool to sequence audio files
+      </kbd> qui est un puissant outils pour séquencer un fichier audio
     </td>
   </tr>
   <tr>
-    <th class="sub1">Strip Silence&hellip;
+    <th class="sub1">Supprimer le Silence&hellip;
     </th>
-    <td>Opens the
-      <kbd class="menu">Strip Silence
-      </kbd> window which is a very handy tool to remove all audio under a user-chosen threshold (with a
-      preview)
+    <td>Ouvre la fenêtre 
+      <kbd class="menu">Supprimer le Silence
+      </kbd> qui permet de manière très pratique de supprimer l'audio sous un seuil choisi par l'utilisateur
+	  (avec pré-écoute)
     </td>
   </tr>
   <tr>
-    <th class="sub1">Reverse
+    <th class="sub1">Inverser
     </th>
-    <td>Mirrors the audio horizontally
+    <td>crée une symetrie temporelle (horizontale) de l'audio
     </td>
   </tr>
   <tr>
-    <th colspan="2">Layering
+    <th colspan="2">Empilement
     </th>
   </tr>
   <tr>
-    <th class="sub1">Raise to Top
+    <th class="sub1">Mettre au dessus
     </th>
-    <td>On overlapping regions, puts the selected one(s) on top
+    <td>Dans les régions qui se chevauchent, met celle qui est sélectionnée au dessus de toutes les autres
     </td>
   </tr>
   <tr>
-    <th class="sub1">Raise
+    <th class="sub1">Monter
     </th>
-    <td>On overlapping region, makes the selected one(s) one layer higher
+    <td>Dans les régions qui se chevauchent, monte celle(s) qui est (sont) sélectionnée(s), d'un niveau
     </td>
   </tr>
   <tr>
-    <th class="sub1">Lower
+    <th class="sub1">Abaisser
     </th>
-    <td>Makes the selected region(s) one layer lower
+    <td>Abaisse d'un niveau la (les) région(s) sélectionnée(s)
     </td>
   </tr>
   <tr>
-    <th class="sub1">Lower to Bottom
+    <th class="sub1">Mettre au dessous
     </th>
-    <td>Sends the selected region to the background
+    <td>Envoie la région sélectionnée à l'arrière-plan
     </td>
   </tr>
   <tr>
@@ -216,85 +216,89 @@
     </th>
   </tr>
   <tr>
-    <th class="sub1">Transpose&hellip;
+    <th class="sub1">Transposer&hellip;
     </th>
-    <td>On a MIDI region, shows the
+    <td>Pour une région MIDI, affiche la fenêtre 
       <a href="@@transposing-midi">
-	<kbd class="menu">Transpose MIDI
-	</kbd> window
-      </a>, allowing to shift the pitch of the whole MIDI region by &plusmn;
-      <em>n
-      </em> semitones or octaves
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Insert Patch Change&hellip;
-    </th>
-    <td>Inserts a patch change at the Edit Point, allowing a change of patch, channel, program and/or bank
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Quantize&hellip;
-    </th>
-    <td>Shows the
-      <a href="@@quantize-midi">
-	<kbd class="menu">Quantize
-	</kbd> window
-      </a>, allowing to perfectly align the MIDI notes to the musical grid
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Legatize
-    </th>
-    <td>Shortens or elongates the MIDI notes to make them perfectly sequential, i.e. the end of a note is
-      the start of the following one
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Remove Overlap
-    </th>
-    <td>Shortens or elongates the MIDI notes to make them perfectly sequential, i.e. the end of a note is
-      the start of the following one
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Transform&hellip;
-    </th>
-    <td>
-      <a href="@@transforming-midi---mathematical-operations">
-	<kbd class="menu">Transform
-	</kbd> window
-      </a>, that allows for mathematical operations on the midi notes
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Unlink all selected regions
-    </th>
-    <td>Makes the selected MIDI regions independent, e.g. editing this region won't affect any other one.
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Unlink from unselected
-    </th>
-    <td>Makes the selected MIDI regions independent from regions outside the selection, but keep the link
-      between the selected ones.
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">Deinterlace Into Layers
-    </th>
-    <td>Splits the selected region(s) to create in-place copies each containing only one channel. A region
-      containing e.g. 3 channels will generate 3 stacked regions containing 1 channel each.
-    </td>
-  </tr>
-  <tr>
-    <th class="sub1">List Editor&hellip;
-    </th>
-    <td>Shows the
-      <a href="@@midi-list-editor">
-	<kbd class="menu">List Editor
+	<kbd class="menu">Transposition MIDI
 	</kbd>
-      </a> which sequentially lists all the MIDI events in the region, and allows for precise modifications
+      </a>, ce qui permet de modifier la hauteur de toute une région MIDI de &plusmn;
+      <em>n
+      </em> demi-tons ou octaves
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Inserer un changement de Patch&hellip;
+    </th>
+    <td>Insère un changement de patch au point de montage, ce qui permet de un changement patch, de canal,
+    de programme ou de banque.
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Quantifier&hellip;
+    </th>
+    <td>Affiche la fenêtre
+      <a href="@@quantize-midi">
+	<kbd class="menu">Quantifier
+	</kbd>
+      </a>, ce qui permet d'aligner les notes MIDI a une grille musicale
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Legato
+    </th>
+    <td>Raccourcis ou allonge des notes MIDI afin de les rendre parfaitement séquentielles, c'est à dire que
+      la fin d'une note est le début de la suivante.
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Supprimer le chevauchement
+    </th>
+    <td> Raccourcir ou allonger des notes MIDI afin de les rendre parfaitement séquentielles, c'est à dire
+	  que la fin d'une note est le début de la suivante.
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Transformer&hellip;
+    </th>
+    <td> La fenêtre 
+      <a href="@@transforming-midi---mathematical-operations">
+	<kbd class="menu">Transformer
+	</kbd>
+      </a>, permet d'effectuer des opérations mathématiques sur des notes MIDI
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Délier les régions sélectionnées
+    </th>
+    <td>Rend chaque région MIDI sélectionnée, indépendante, c'est-à-dire que l'édition de cette région
+	  n'affectera pas les autres.
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Délier des non-sélectionnées
+    </th>
+    <td>Rend les régions MIDI sélectionnées indépendantes des régions hors de la sélection, mais conserve
+	  les liens entre les régions sélectionnées.
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Désentrelacer entre les couches
+    </th>
+    <td> Scinde la (les) région(s) sélectionnée(s) pour créer des copies au même endroit contenant chacune
+	  seulement un canal. Par exemple, une région contenant trois canaux va créer 3 régions avec un seul
+	  canal chacune.
+    </td>
+  </tr>
+  <tr>
+    <th class="sub1">Éditeur de Liste&hellip;
+    </th>
+    <td>Affiche l'
+      <a href="@@midi-list-editor">
+	<kbd class="menu">Éditeur de Liste
+	</kbd>
+      </a> qui fait une liste séquentielle de tous les évènements MIDI contenus dans une région, et permet
+	  des modifications précises
     </td>
   </tr>
   <tr>
@@ -304,65 +308,65 @@
   <tr>
     <th class="sub1">&square; Opaque
     </th>
-    <td>When checked, makes the region opaque audio-wise, i.e., the underlying regions won't be audible
+    <td> Si coché, rend la région "opaque" d'un point de vue audio. Les régions dessous ne sont pas audible.
     </td>
   </tr>
   <tr>
-    <th class="sub1">&square; Mute
+    <th class="sub1">&square; Sourdine (Mute)
     </th>
-    <td>When checked, mutes
-      <em>only
-      </em> the selected region on the track, without muting the track. The muted regions will have
+    <td>Si coché, met
+      <em>seulement
+      </em> la région sélectionnée en sourdine, sans couper la piste. Les régions en sourdine auront
       <em>!!
-      </em> prepended to their name and will be semi-transparent
+      </em> en préfixe de leur nom et seront translucides.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Normalize&hellip;
+    <th class="sub1">Normaliser&hellip;
     </th>
-    <td>Shows the
-      <kbd class="menu">Normalize region
-      </kbd> dialog, which allows to scale the region level by setting its maximum level, optionally
-      constraining the RMS
+    <td>Affiche la boîte de dialogue
+      <kbd class="menu">Normaliser la région
+      </kbd> qui permet de changer le niveau d'une région en fixant son niveau crête, ce qui peut
+	  éventuellement contraindre le niveau RMS.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Boost Gain
+    <th class="sub1">Monter le Gain
     </th>
-    <td>Increases the gain on the selected region by boosting the audio, without touching the envelope or
-      automation
+    <td>Augmente le gain de la région sélectionnée en augmentant le niveau audio mais sans modifier son
+      enveloppe ou son automation.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Cut Gain
+    <th class="sub1">Diminuer le Gain
     </th>
-    <td>Reduces the gain without touching the envelope or automation
+    <td>Baisse le niveau audio sans toucher à l'enveloppe ni à l'automation.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Reset Gain
+    <th class="sub1">Réinitialiser le Gain
     </th>
-    <td>If the gain has been edited, revert to its initial value
+    <td>Si le gain a été modifié, il revient à sa valeur initiale.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Reset Envelope
+    <th class="sub1">Réinitialiser l'Envelope
     </th>
-    <td>If the gain envelope has been edited, resets it to its initial value (constant at 0 dB)
+    <td>Si l'enveloppe de gain a été modifiée, cela la remet à sa valeur d'origne (constant à 0dB).
     </td>
   </tr>
   <tr>
-    <th class="sub1">&square; Invert Polarity
+    <th class="sub1">&square; Inverser Polarité
     </th>
-    <td>When checked, inverts the signal's phase in the selected regions and renders the symbol (a diagonal
-      line across zero) next to the names of affected regions
+    <td>Si coché, inverse la phase du signal des régions sélectionnées et affiche un symbole (un rond barré)
+      à côté du nom des régions affectées
     </td>
   </tr>
   <tr>
-    <th class="sub1">&square; Envelope Active
+    <th class="sub1">&square; Enveloppe Activé
     </th>
-    <td>When unchecked, disables any envelope editing that has been made. The envelope will be displayed in
-      yellow instead of green.
+    <td>Si décoché, désactive toutes les modification d'enveloppe qui ont été faites. L'enveloppe sera alors
+      affichée en jaune plutôt qu'en vert.
     </td>
   </tr>
   <tr>
@@ -370,41 +374,42 @@
     </th>
   </tr>
   <tr>
-    <th class="sub1">Move to Original Position
+    <th class="sub1">Déplacer à la position d'origine
     </th>
-    <td>Moves the region where it was initially recorded or inserted in the session
+    <td>Déplace la région jusqu'à la position où elle a été initialement enregistrée ou insérée dans la
+    session. 
     </td>
   </tr>
   <tr>
-    <th class="sub1">Snap Position to Grid
+    <th class="sub1">Aimanter la position sur la grille
     </th>
-    <td>If the Grid Mode is set to
-      <em>Grid
-      </em>, snaps the region to the nearest grid line
+    <td>Si le mode 
+      <em>Grille
+      </em> est actif, aimante la région sur la ligne de grille la plus proche.
     </td>
   </tr>
   <tr>
-    <th class="sub1">&square; Lock
+    <th class="sub1">&square; Verrouiller
     </th>
-    <td>Locks the selected regions at their current positions in time and tracks, avoiding any movement on
-      the timeline. The region name will be surrounded by
+    <td>Verrouille la position (temporelle et piste) de la région sélectionnée, ce qui empêche tout
+      mouvement. Le nom de la région sera entouré de signes
       <em>&gt;
-      </em> and
+      </em> et
       <em>&lt;
-      </em> brackets
+      </em> 
     </td>
   </tr>
   <tr>
-    <th class="sub1">&square; Lock to Video
+    <th class="sub1">&square; Verrouiller sur la vidéo
     </th>
-    <td>Same as above, relative to the position in the video
+    <td>Idem mais relativement à sa position sur la vidéo
     </td>
   </tr>
   <tr>
-    <th class="sub1">Set Sync Position
+    <th class="sub1">Définir le point de synchro
     </th>
-    <td>Creates or move the Sync position, i.e. the point of the region that will be aligned or snapped to
-      the grid, and that is (by default) the beginning of the region.
+    <td>Crée ou déplace le point de synchro, c'es-à-dire le point qui servira à aligner ou aimanter la
+      région, et qui est (par défaut) le début de la région.
     </td>
   </tr>
   <tr>
