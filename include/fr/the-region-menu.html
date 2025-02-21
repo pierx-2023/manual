@@ -420,119 +420,122 @@
     </td>
   </tr>
   <tr>
-    <th class="sub1">Nudge Later
+    <th class="sub1">Décaler à droite
     </th>
-    <td>Moves the region to the right by the amount shown in the
-      <a href="@@nudge-controls">nudge timer
+    <td>Déplace la région vers la droite d'une quantité de temps défini par 
+      <a href="@@nudge-controls">valeur de décalage
       </a>
     </td>
   </tr>
   <tr>
-    <th class="sub1">Nudge Earlier
+    <th class="sub1">Décaler à gauche
     </th>
-    <td>Same as above, to the left
+    <td>Idem, vers la gauche
     </td>
   </tr>
   <tr>
-    <th class="sub1">Nudge Later by Capture Offset
+    <th class="sub1">Décaler à droite selon la latence d'enregistrement
     </th>
-    <td>Moves the region to the right by the capture latency computed by Ardour based on the user's settings
-      regarding latency
+    <td>Déplace la région vers la droite d'une quantité de temps égale à la latence d'enregistrement
+      calculée par Ardour en fonction des réglages utilisateur du tampon
     </td>
   </tr>
   <tr>
-    <th class="sub1">Nudge Earlier by Capture Offset
+    <th class="sub1">Décaler à gauche selon la latence d'enregistrement
     </th>
-    <td>Same as above, to the left
+    <td>Idem, vers la gauche
     </td>
   </tr>
   <tr>
-    <th class="sub1">Sequence Regions
+    <th class="sub1">Séquencer les Régions
     </th>
-    <td>Puts the selected regions one after the other, so that the end of one region is the beginning of the
-      next one, removing any overlap or silence. The reference point is the earliest region.
+    <td>Placer les régions les unes après les autres de manière à ce que la fin de l'une soit le début de la
+      suivante, en supprimant les chevauchements et les silences. La référence est la région la
+      plus précoce.
     </td>
   </tr>
   <tr>
-    <th colspan="2">Markers
+    <th colspan="2">Repères
     </th>
   </tr>
   <tr>
-    <th class="sub1">Add Region Cue Marker
+    <th class="sub1">Ajouter un cue de région
     </th>
-    <td>Opens a dialog to enter a region-level marker at the mouse pointer position
+    <td>Ouvre une fenêtre pour créer un repère lié à la région, à la position de la souris.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Clear Region Cue Markers
+    <th class="sub1">Effacer les cues de région
     </th>
-    <td>Removes all markers from the selected regions
+    <td>Efface tous les cues de la région sélectionnée.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Convert Region Cue Markers to CD Markers
+    <th class="sub1">Convertir les cues de région en marqueurs CD
     </th>
-    <td>Converts all markers from selected regions to CD markers, bit doesn't delete original region-level
-      markers
+    <td>Converti tous les cues de la régions sélectionnée en marqueur de CD, sans supprimer les originaux
     </td>
   </tr>
   <tr>
-    <th class="sub1">Convert Region Cue Markers to Location Markers
+    <th class="sub1">Convertir les cues de région en repère de position
     </th>
-    <td>Converts all markers from selected regions to location markers, bit doesn't delete original
-      region-level markers
+    <td>Converti tous les cues de la régions sélectionnée en repère de position, sans supprimer les
+      originaux 
     </td>
   </tr>
   <tr>
-    <th colspan="2">Trim
+    <th colspan="2">Élaguer
     </th>
   </tr>
   <tr>
-    <th class="sub1">Trim Start at Edit Point
+    <th class="sub1">Élaguer le début au point de montage
     </th>
-    <td>If the Edit Point is within the region boundaries, shortens the region to align its start with the
-      Edit Point
+    <td>Si le point de montage est dans la région, raccourci la région pour placer son début au point de
+      montage
     </td>
   </tr>
   <tr>
-    <th class="sub1">Trim End at Edit Point
+    <th class="sub1">Élaguer la fin au point de montage
     </th>
-    <td>Same as above, for the end of the region
+    <td>Idem pour la fin de la région, raccourci la région pour placer sa fin au point de montage
     </td>
   </tr>
   <tr>
-    <th class="sub1">Trim to Loop
+    <th class="sub1">Élaguer à la boucle
     </th>
-    <td>Uses both the start and end Loop markers to shorten the region
+    <td>Utilise les repères de Début et de Fin de Boucle pour raccourcir la région.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Trim to Punch
+    <th class="sub1">Élaguer au Punch
     </th>
-    <td>Same as above with the Punch markers
+    <td>Idem avec les repères de Punch.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Trim to Previous
+    <th class="sub1">Élaguer à la précédente
     </th>
-    <td>On overlapping regions, shortens the selected one so that the previous region is complete, i.e. the
-      new start point for the selected region is the end point of the previous region on the timeline
+    <td>Lorsque des régions se chevauchent, raccourci la région sélectionnée de manière à ce que la région
+      précédente soit entière, c-à-d que le nouveau début de la région sélectionnée est la fin de la région
+      précédente sur la ligne temporelle.
     </td>
   </tr>
   <tr>
-    <th class="sub1">Trim to Next
+    <th class="sub1">Élaguer à la suivante
     </th>
-    <td>Same as above, with the end of the selected region aligned to the start of the following one.
+    <td>Idem, avec la fin de la région sélectionnée qui s'aligne sur le début de la région suivante sur
+    la ligne temporelle.
     </td>
   </tr>
   <tr>
-    <th colspan="2">Ranges
+    <th colspan="2">Intervalles
     </th>
   </tr>
   <tr>
-    <th class="sub1">Set Loop Range
+    <th class="sub1">Définir l'intervalle de Boucle
     </th>
-    <td>Creates a Loop range based on the selected regions, i.e. the start of the loop range is the start of
+    <td>Crée un Intervalle de Boucle basé sur les régions sélectionnées. Le début de l'intervalle est le début de la région la plus précoce et la fin de la boucle est la fin de la région la plus tardive.
+	  Creates a Loop range based on the selected regions, i.e. the start of the loop range is the start of
       the earliest region, and the end of the loop is the end of the latest region.
     </td>
   </tr>
