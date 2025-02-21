@@ -1,0 +1,125 @@
+<h2 id="selection_clocks">Les horloges de sélection
+</h2>
+
+<figure>
+    <img src="/images/selection-clocks.png" alt="Les horloges d'intervalles">
+    <figcaption>
+      Les horloges de sélection
+    </figcaption>
+</figure>
+
+<p>
+  L' 
+  <dfn>intervalle de sélection
+  </dfn>, défini à l'aide de l'
+  <a href="@@toolbox">Outil de sélection temporelle
+  </a>,
+  est affiché dans ces trois horloges: Début de sélection, Fin de sélection, Durée.
+</p>
+<p>
+  En cliquant sur l'une des horloges, on dépplace le Lecteur sur le début ou la fin de l'intervalle
+</p>
+<p>
+  Un Clic
+  <kbd class="mouse">Droit
+  </kbd> sur l'une des horloges, ouvre un menu contextuel pour changer le type d'affichage selon
+  <a href="@@editing-clocks">
+	4 modes d'horloges
+  </a>, et pour copier l'horloge sélectionnée dans le presse-papier
+</p>
+
+<h2 id="punch_controls">Les contôles du Punch &amp; les horloges
+</h2>
+
+<figure>
+  <img src="/images/punch-controls.png" alt="Les contrôles du punch">
+  <img src="/images/punch-clocks.png" alt="Les horloges du punch">
+  <figcaption>
+    Les contrôles du punch et les horloges correspondantes
+  </figcaption>
+</figure>
+
+<p>
+  Les contrôles du punch disponibles dans la barre d'outils, fonctionnent avec les horloges du punch.
+</p>
+
+<p>
+  Les boutons
+  <kbd class="menu">Ent.
+  </kbd> et
+  <kbd class="menu">Sor.
+  </kbd> font référence à l'intervalle de punch et permettent d'utiliser l'un, l'autre ou bien les deux
+  limites de punch:
+</p>
+<table class="dl">
+  <tr>
+	<th>Ent. seul
+	</th>
+	<td>Enregistre depuis le repère d'entrée sans limite de fin.
+	</td>
+  </tr>
+  <tr>
+	<th>Sor. seul
+	</th>
+	<td>Enregistre jusqu'au repère de sortie, sans repère de début.
+	</td>
+  </tr>
+  <tr>
+	<th>Ent.
+	  <em>et
+	  </em> Sor
+	</th>
+	<td>Enregistre seuelement entre les repères d'entrée et de sortie
+	</td>
+  </tr>
+</table>
+
+<p>
+  L'horloge de punch peut être contrôlée de la même manière que l'horloge d'intervalle (déplacement du
+  lecteur et mode d'affichage).
+</p>
+
+<h2 id="rec-mode">Mode d'Enregistrement
+</h2>
+
+<p>
+  Le bouton 
+  <kbd class="menu">Enreg.
+  </kbd> gère le comportement des pistes lors de l'enregistrement:
+</p>
+
+<table class="dl">
+  <tr>
+	<th>Superposé
+	  <em>(par défaut)
+	  </em>
+	</th>
+	<td>Les piste en 
+	  <dfn>mode normal
+	  </dfn> enregistrent de manière non-destructive &mdash; les données sont écrites dans de nouveaux
+  fichiers et en cas de superposition audio, les nouvelles régions s'afficheront au-dessus de celles préalablement
+  existantes. C'est le mode recommandé la plupart du temps.
+	</td>
+  </tr>
+  <tr>
+	<th>Non-empilé
+	</th>
+	<td>Les pistes dans le 
+	  <dfn>mode non-empilé
+	  </dfn> enregistrent de manière non-destructive &mdash; les données sont écrites dans de nouveaux
+  fichiers et en cas de superposition audio, les régions existantes seront ajustées pour qu'il n'y ait pas
+  de superposition. Cela n'affecte pas les fichiers précédemment enregistrés et les régions raccourcies
+  pourront à nouveau être rallongées. Le mode non-empilé peut être utile pour des enregistrements de voix
+  parlées, particulièrement si on l'tilise avec
+	  <a href="@@pushpull-trimming">push/pull trimming
+	  </a>.
+	</td>
+  </tr>
+</table>
+
+<p>
+  Voir
+  <a href="@@track-types">Les Modes de Pistes
+  </a> pour de plus amples informations.
+</p>
+
