@@ -1,151 +1,219 @@
 
-<h2 id="latency-compensation-info">The Latency Compensation Info</h2>
+<h2 id="latency-compensation-info">Informations sur la compensation de latence
+</h2>
 
 <figure>
-	<img alt="The Latency Compensation Info" src="/images/latency-compensation-info.png">
+	<img alt="Informations sur la compensation de latence" src="/images/latency-compensation-info.png">
 	<figcaption>
-		Latency Compensation Info
+		Informations sur la compensation de latence
 	</figcaption>
 </figure>
 
 <p>
-  This section shows information about the latency compensation Ardour sets
-  to align all signals in time whatever their route (and processing applied).
+  Cette section affiche les informations concernant la compensation de latence qu'Ardour règle pour aligner
+  les signaux dans le temps, quelque soit les routages et traitements appliqués.
 </p>
 
 <p>
-  The only button <kbd class="menu">Disable PDC</kbd> allows to enable/disable
-  the <em>P</em>lugin <em>D</em>elay <em>C</em>ompensation. Enabling it will
-  make all signal perfectly aligned, while disabling it will reduce the delay,
-  at the expense of slightly misaligned signals for tracks that have plugins introducing
-  latency.
+  Le bouton unique
+  <kbd class="menu">Désactiver CDG
+  </kbd> permet l'activation / désactivation de la
+  <em>C
+  </em>ompensation de
+  <em>D
+  </em>élai des
+  <em>G
+  </em>reffons. En l'activant, tout signal sera parfaitement synchronisé, alors qu'en le désactivant on
+  réduit la latence mais au coût d'un léger décalage entre les signaux des pistes qui ont des greffons
+  activés.  
 </p>
 
 <p>
-	The two infos are:
+	Les deux infos sont :
 </p>
 <ul>
-	<li>the maxium reported latency by a plugin chain (worst route latency)</li>
-	<li>the I/O latency, i.e. how long does it take for a signal arriving at any physical input to be played back again.</li>
+  <li>la latence maximal que va générer une chaîne de greffons (le routage avec la pire latence)
+  </li>
+  <li>la latence d'E/S, c'est à dire le temps qu'il faut à un signal arrivant sur une entrée matérielle, à
+	  être jouée à nouveau
+  </li>
 </ul>
 
 
-<h2 id="playhead_options">The Playhead Options</h2>
+<h2 id="playhead_options">Les options du Lecteur
+</h2>
 
 <figure>
-	<img alt="The playhead options" src="/images/playhead-options.png">
+	<img alt="Les options du Lecteur" src="/images/playhead-options.png">
 	<figcaption>
-		The playhead options
+		Les options du Lecteur
 	</figcaption>
 </figure>
 
 <p>
-  Those 2 buttons control the behaviour of the playhead:
+  Ces 2 boutons contrôlent le comportement du lecteur:
 </p>
 <ul>
-	<li><dfn>Follow Range</dfn> is a toggle that can be used to control whether or not making a range selection will move the playhead to the start of the range.</li>
-	<li><dfn>Auto Return</dfn> is a toggle switch too. When active, pressing the Stop button returns the playhead to its previous position, and when inactive, pressing Stop keeps the playhead at its current location. Activating Auto Return can be useful for hearing the same piece of audio before and after tweaking it, without having to set a loop range on it.</li>
+  <li>
+	<dfn>Suivre l'intervalle
+	</dfn> est un bouton qui permet (si activé). à l'arrêt de la lecture, de renvoyer le Lecteur au début d'un intervalle,
+	si un a été défini. S'il est désactivé ou si aucun intervalle n'est défini, le lecteur reste là où la
+	lecture s'est arrêtée.
+  </li>
+  <li>
+	<dfn>Retour Auto
+	</dfn> est un bouton qui permet (si activé), à l'arrêt de la lecture, de renvoyer le lecteur à sa
+	position précédente. S'il est désactivé, le lecteur reste là où la lecture s'est arrêtée. L'activation
+	de Retour Auto est utile pour écouter une partie du son avant et après l'avoir travaillée, sans avoir à
+	définir une boucle.
+  </li>
 </ul>
 
-<h2 id="status_indicators">The Status indicators</h2>
+<h2 id="status_indicators">Les indicateur de status
+</h2>
 
 <figure>
-	<img alt="The Status buttons" src="/images/status_buttons.png">
+	<img alt="Les indicateur de status" src="/images/status_buttons.png">
 	<figcaption>
-		The Status buttons
+		Les indicateur de status
 	</figcaption>
 </figure>
 
 <p>
-  The <dfn>Status</dfn> buttons show the current session state:
+  Le bouton de
+  <dfn>Status
+  </dfn> affiche l'état actuel de la session:
 </p>
 
 <table class="dl">
-  <tr><th>Solo</th><td>Blinks when one or more tracks are being soloed, see <a href="@@muting-and-soloing">Muting and Soloing</a>. Clicking this button disables any active explicit and implicit solo on all tracks and busses.</td></tr>
-  <tr><th>Audition</th><td>Blinks when some audio is auditioned, e.g. by using the import dialog, or using the <kbd class="menu">Audition</kbd> context menu in the <a href="@@the-region-list">Regions List</a>. Clicking this button stops the auditioning.</td></tr>
-  <tr><th>Feedback</th><td>Blinks when Ardour detects a <dfn>feedback loop</dfn>, which happens when the output of an audio signal chain is plugged back to its input. This is probably not wanted and can be dangerous for the hardware and the listener.</td></tr>
+  <tr>
+	<th>Solo
+	</th>
+	<td>Clignote lorsque qu'une ou plusieurs piste sont en Solo, voir
+	  <a href="@@muting-and-soloing">Mute et Solo
+	  </a>. Cliquer ce bouton désactive tous les Solos, aussi bien sur les pistes que sur les bus.
+	</td>
+  </tr>
+  <tr>
+	<th>Écoute
+	</th>
+	<td>Clignote dès que de l'audio est joué, par exemple dans la fenêtre d 'Import ou bien lors de
+	l'utilisation du menu contextuel
+	  <kbd class="menu">Écoute
+	  </kbd> dans la
+	  <a href="@@the-region-list">Liste des Regions
+	  </a>. Cliquer ce bouton arrête l'écoute.
+	</td>
+  </tr>
+  <tr>
+	<th>Larsen
+	</th>
+	<td>Clignote si Ardour détecte un 
+	  <dfn>Larsen
+	  </dfn>, ce qui se produit lorsque la sortie d'une chaîne audio est branchée sur son entrée. C'est
+	  très souvent une erreur et cela peut être dangeureux aussi bien pour le matériel que pour l'auditeur.
+	</td>
+  </tr>
 </table>
 
-<h2 id="monitor_section_info">The Monitor Section Info</h2>
+<h2 id="monitor_section_info">Infos de la section de contrôle
+</h2>
 
 <figure>
-	<img alt="Monitor Section Info" src="/images/monitor-section-info.png">
+	<img alt="Infos de la section de contrôle" src="/images/monitor-section-info.png">
 	<figcaption>
-		Monitor Section Info
+		Infos de la section de contrôle
 	</figcaption>
 </figure>
 
 <p>
-  This section is only useful and active if the session has a
-  <a href="@@monitor-section">Monitor section</a>. The three buttons are
-  exactly linked to their counterparts in the Monitor slice of the mixer,
-  but as they sit in the toolbar, remain visible even in Editor mode.
+  Cette section n'est active et utile que si la session a une 
+  <a href="@@monitor-section">Section de Contrôle
+  </a>. Les trois boutons sont étroitement liés à leurs contreparties dans la partie Contrôle d'écoute du
+  mixeur, mais étant donné qu'ils sont dans la barre d'outils, il reste visible dans le mode Montage.
 </p>
 
 <p>
-	The three buttons are:
+	Ces trois boutons sont:
 </p>
 <ul>
-  <li><dfn>Mono</dfn>: sums all of the paths to a single mono signal and applies it to all Monitor Section outputs.</li>
-  <li><dfn>Dim All</dfn>: Reduces overall monitor level by the amount set with the Dim level control.</li>
-  <li><dfn>Mute All</dfn>: Mutes all monitoring.</li>
+  <li>
+	<dfn>Mono
+	</dfn>: sommation monophonique de tous les canaux, appliquée à toutes les sorties de la section d'Écoute
+  </li>
+  <li>
+	<dfn>Att.
+	</dfn>: Réduit globalement le niveau de Contrôle d'une quantité gérée par le niveau d'atténuation du
+	Contrôle. 
+  </li>
+  <li>
+	<dfn>Mute
+	</dfn>: Mute toutes les Contrôles.
+  </li>
 </ul>
 
 
-<h2 id="tb_master_level_meter">The Master Level Meter</h2>
+<h2 id="tb_master_level_meter">Le VU-mètre Stéréo
+</h2>
 
 <figure>
-	<img alt="The Master Level Meter" src="/images/master-level-meter.png">
+	<img alt="Le VU-mètre Stéréo" src="/images/master-level-meter.png">
 	<figcaption>
-		The Master Level Meter
+		Le VU-mètre Stéréo
 	</figcaption>
 </figure>
 <p>
-  The global meter shows the levels of the master's output. Its the same
-  meter that sits in the <a href="@@master-bus-strip">Master's Mixer strip</a>,
-  and also shows a peak indicator, that turns red when  any level exceeds
-  0dB. It can be reset by a <kbd class="mouse">Left</kbd> click.
+  Ce VU-mètre global affiche le niveau de la sortie stéréo. C'est le mêm VU-mètre que l'on retrouve dans la
+  <a href="@@master-bus-strip">tranche Stéréo du mixeur
+  </a>,
+  Il y a aussi un indicateur de pic, qui s'allume en rouge quand le signal dépasse 0dB. Il s'éteint d'un clic-
+  <kbd class="mouse">gauche
+  </kbd> .
 </p>
 
-<h2 id="tb_script_buttons">Script/Shortcut buttons</h2>
+<h2 id="tb_script_buttons">Bouton Script/Raccourcis
+</h2>
 
 <figure>
-	<img alt="The Script buttons" src="/images/script-buttons.png">
+	<img alt="Le Bouton Script/Raccourcis" src="/images/script-buttons.png">
 	<figcaption>
-		The Script/shortcuts buttons
-	</figcaption>
-</figure>
-
-<p>
-  The buttons in between the Mode Selector and the Master Level Meter are
-  script or shortcuts buttons, which are user-definable buttons to attach
-  any session <a href="@@lua-scripting">lua-script</a> to, or any action
-  shortcut (e.g. for tasks that are used often and buried deep inside
-  nested menus).
-</p>
-<p>
-  The number of buttons (precisely, the number of columns of two buttons)
-  can be set in the <a href="@@preferences#preferences-appearance-toolbar">Preferences</a>.
-</p>
-<p>
-  <kbd class="mouse">Left</kbd>-clicking an affected button launches the
-  script or shortcut, while <kbd class="mouse">right</kbd>-clicking or 
-  clicking an unaffected button allows change the script/shortcut 
-  the button should execute.
-</p>
-
-
-<h2 id="mode_selector">The Mode Selector</h2>
-
-<figure>
-	<img alt="The Mode Selector" src="/images/mode_selector.png">
-	<figcaption>
-		The Mode Selector
+		Le Bouton Script/Raccourcis
 	</figcaption>
 </figure>
 
 <p>
-  The Mode Selector allows switching between the Editor, Mixer or Recording
-  windows. If a window is detached, the corresponding button is lit.
-  Clicking the button switches the detached window visibility.
+  Les boutons situés entre le sélecteur de mode le VU-mètre du stéréo sont ceux des script et raccourcis,
+  boutons personnalisables pour y localiser des 
+  <a href="@@lua-scripting">script lua
+  </a> de session, ou d'autres actions (des taches récurrentes ou cachée au fin fond des menus).
+</p>
+<p>
+  Le nombre de bouton est paramétrable (précisément le nombre de colonne de deux boutons) dans les
+  <a href="@@preferences#preferences-appearance-toolbar">Préférences
+  </a>.
+</p>
+<p>Un clic-
+  <kbd class="mouse">Gauche
+  </kbd> sur un bouton lance le script ou le raccourci qui y est affecté
+  tandis qu'un clic-
+  <kbd class="mouse">Droit
+  </kbd> ou un clic sur un bouton sans affectation, permet de changer le script / raccourci que ce bouton
+  doit exécuter.
+</p>
+
+
+<h2 id="mode_selector">Le sélecteur de Mode
+</h2>
+
+<figure>
+	<img alt="Le sélecteur de Mode" src="/images/mode_selector.png">
+	<figcaption>
+		Le sélecteur de Mode
+	</figcaption>
+</figure>
+
+<p>
+  Le sélecteur de Mode permet de basculer entre les fenêtres de Montage, de Mixage ou d'Enregitrement. Si
+  une fenêtre est détachée, le bouton correspondant est illuminé; cliquer ce bouton affiche ou cache cette
+  fenêtre. 
 </p>
