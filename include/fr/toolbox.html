@@ -45,57 +45,57 @@
 <p>
   L'idée générale derrière le mot d'édition Vague est la suivante:
   <ul>
-    <li>Effacer un intervalle va décaler les régions suivantes vers le début de façon à compenser la plage de
-    temps effacée.
+    <li>Effacer un intervalle va décaler les régions suivantes vers le début pour compenser la durée effacée. 
 	</li>
     <li>Effacer une région va déplacer les régions suivantes vers le début pour compenser la durée effacée.
 	</li>
-    <li>Moving a region will move later regions to compensate for the length of the move
+    <li>Déplacer une région va décaler les régions suivantes pour compenser la durée du déplacement.
 	</li>
-    <li>Inserting a new region (via dragging or via Paste) will move later regions to the right to
-      compensate
+    <li>Insérer une nouvelle région (via glisser-déposer ou coller) va déplacer les régions suivante vers la
+      droite pour compenser le temps ajouté.
 	</li>
   </ul>
 </p>
 
 <p>
-  Within this general behavior several variations are available
-  as Ripple edit modes:
+  Pour le mode Vague, les variantes suivantes sont disponibles: 
+</p>
+<p class="note">
+  la variante ne s'applique qu'à une nouvelle sélection. Si une sélection est en cours, c'est la variante
+  choisie au moment de la sélection qui reste active.
 </p>
 
 <ol>
   <li>
-    <dfn>Selected
-	</dfn>. Only applies the ripple logic to currently selected
-    tracks. After making a selection, you can use the
+    <dfn>Sélectionné
+	</dfn>. Applique la logique du mode Vague aux seules pistes sélectionnées. Après avoir fait la
+    sélection, vous pouvez utiliser le modificateur
     <kbd class="button">Alt
-	</kbd> modifier and click on tracks to add or remove
-    them to/from the selection. Markers will stay intact.
+	</kbd> et cliquer sur des pistes pour les enlever ou les ajouter à la sélection. Les repères ne bougent
+	pas. 
   </li>
   <li>
-    <dfn>All
-	</dfn>. Applies the ripple logic to all tracks on the timeline
-    and shifts location, CD, and cue markers accordingly. Selecting a range
-    with this mode will automatically make a time-constrained selection in all tracks of the project.
+    <dfn>Tout
+	</dfn>. Applique la logique de la Vague à toutes les pistes de la ligne temporelle et déplace aussi les
+    repères de position, repères de Cue. En sélectionnant un intervalle dans ce mode, on crée une sélection
+    temporelle sur toutes les pistes du projet.
   </li>
   <li>
     <dfn>Interview
-	</dfn>. This mode works just like the
-	<dfn>Selected
+	</dfn>. Ce mode fonctionne comme le mode 
+	<dfn>Sélectionné
 	</dfn>
-    mode with one exception: when you select a range and press
+    à une exception près: si vous sélectionnez un intervalle et appuyez sur 
     <kbd class="button">Del
-	</kbd>, this will remove the selected portion
-    of either audio or MIDI without shifting other clips to the left to match
-    the freed space on the timeline. The main use case for this mode is editing 
-    interviews where you want the ripple behavior to edit out e.g. periods
-    of silence, while being able to just delete e.g. an out-of-place
-    noise or an exclamation by the interviewer.
+	</kbd>, cela efface les portions sélectionnées, qu'elles soientt de l'audio ou du MIDI, sans déplacer à
+    gauche les régions suivantes pour combler le vide. Un cas d'usage est le montage d'un interview où vous
+    voudrez effacer les périodes de silence (en sélectionnant plusieurs pistes) tout en pouvant supprimer
+    des bruits ponctuel dans l'interview (en ne sélectionnant qu'une piste).
   </li>
 </ol>
 
 <p class="note">
-  If
+  Si 
   <kbd class="menu">Snap To Grid
   </kbd> is enabled, then regions can
   only move so that they align with locations determined by the current
